@@ -46,12 +46,14 @@
             this.rOLTableAdapter1 = new WindowsFormsApp2.panesitorol1TableAdapters.ROLTableAdapter();
             this.txttipo = new WindowsFormsApp2.Utilerias.Validacion();
             this.errorValidar = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorValidacion = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panesitorol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvrol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitorol1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorValidar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorValidacion)).BeginInit();
             this.SuspendLayout();
             // 
             // btncancelar
@@ -189,6 +191,10 @@
             this.errorValidar.ContainerControl = this;
             this.errorValidar.Icon = ((System.Drawing.Icon)(resources.GetObject("errorValidar.Icon")));
             // 
+            // errorValidacion
+            // 
+            this.errorValidacion.ContainerControl = this;
+            // 
             // frmrol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,6 +217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitorol1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorValidar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorValidacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +241,6 @@
         private panesitorol1TableAdapters.ROLTableAdapter rOLTableAdapter1;
         private Utilerias.Validacion txttipo;
         private System.Windows.Forms.ErrorProvider errorValidar;
+        private System.Windows.Forms.ErrorProvider errorValidacion;
     }
 }
