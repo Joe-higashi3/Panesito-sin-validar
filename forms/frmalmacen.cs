@@ -70,7 +70,35 @@ namespace WindowsFormsApp2.forms
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            GuardarAlmacen();
+
+            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == false)
+
+            {
+                MessageBox.Show("Ha ocurrido un error");
+                limpiar();
+
+
+
+            }
+
+            else if (clsvalidar.ValidarCamposVaciosYNumeros(this, errorValidacion) == false)
+            {
+
+
+                MessageBox.Show("Ha ocurrido un error");
+                limpiar();
+
+            }
+
+            else
+            {
+
+
+                GuardarAlmacen();
+
+            }
+
+
         }
 
         private void dgalmacen_CellContentClick(object sender, DataGridViewCellEventArgs e)

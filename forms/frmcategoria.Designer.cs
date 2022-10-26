@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
-            this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,18 +41,20 @@
             this.cATEGORIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panesitoCategoria = new WindowsFormsApp2.panesitoCategoria();
             this.cATEGORIATableAdapter = new WindowsFormsApp2.panesitoCategoriaTableAdapters.CATEGORIATableAdapter();
+            this.txtdescripcion = new WindowsFormsApp2.Utilerias.Validacion();
+            this.errorValidacion = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvcategoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoCategoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorValidacion)).BeginInit();
             this.SuspendLayout();
             // 
             // btncancelar
             // 
-            this.btncancelar.Location = new System.Drawing.Point(338, 129);
-            this.btncancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btncancelar.Location = new System.Drawing.Point(254, 105);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(173, 95);
+            this.btncancelar.Size = new System.Drawing.Size(130, 77);
             this.btncancelar.TabIndex = 22;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
@@ -61,57 +62,44 @@
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(127, 129);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnguardar.Location = new System.Drawing.Point(95, 105);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(173, 95);
+            this.btnguardar.Size = new System.Drawing.Size(130, 77);
             this.btnguardar.TabIndex = 21;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
-            // txtdescripcion
-            // 
-            this.txtdescripcion.Location = new System.Drawing.Point(127, 85);
-            this.txtdescripcion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(172, 22);
-            this.txtdescripcion.TabIndex = 20;
-            // 
             // txtid
             // 
             this.txtid.Enabled = false;
-            this.txtid.Location = new System.Drawing.Point(64, 29);
-            this.txtid.Margin = new System.Windows.Forms.Padding(4);
+            this.txtid.Location = new System.Drawing.Point(48, 24);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(172, 22);
+            this.txtid.Size = new System.Drawing.Size(130, 20);
             this.txtid.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 88);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(26, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 17);
+            this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "Descripcion";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(26, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 17);
+            this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Id";
             // 
             // dgvcategoria
             // 
             this.dgvcategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvcategoria.Location = new System.Drawing.Point(39, 231);
-            this.dgvcategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvcategoria.Location = new System.Drawing.Point(29, 188);
             this.dgvcategoria.Name = "dgvcategoria";
             this.dgvcategoria.Size = new System.Drawing.Size(0, 0);
             this.dgvcategoria.TabIndex = 23;
@@ -124,10 +112,9 @@
             this.caidDataGridViewTextBoxColumn,
             this.cadescripcionDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.cATEGORIABindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 239);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(20, 194);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(485, 245);
+            this.dataGridView1.Size = new System.Drawing.Size(364, 199);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -158,19 +145,35 @@
             // 
             this.cATEGORIATableAdapter.ClearBeforeFill = true;
             // 
+            // txtdescripcion
+            // 
+            this.txtdescripcion.Location = new System.Drawing.Point(95, 69);
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(289, 20);
+            this.txtdescripcion.SoloLetras = true;
+            this.txtdescripcion.SoloNumeros = false;
+            this.txtdescripcion.TabIndex = 25;
+            this.txtdescripcion.Validar = true;
+            this.txtdescripcion.VRFC = false;
+            // 
+            // errorValidacion
+            // 
+            this.errorValidacion.ContainerControl = this;
+            // 
             // frmcategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnguardar);
-            this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvcategoria);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmcategoria";
             this.Text = "frmcategoria";
             this.Load += new System.EventHandler(this.frmcategoria_Load);
@@ -178,6 +181,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoCategoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorValidacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,7 +191,6 @@
 
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnguardar;
-        private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -198,5 +201,7 @@
         private panesitoCategoriaTableAdapters.CATEGORIATableAdapter cATEGORIATableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn caidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cadescripcionDataGridViewTextBoxColumn;
+        private Utilerias.Validacion txtdescripcion;
+        private System.Windows.Forms.ErrorProvider errorValidacion;
     }
 }

@@ -72,6 +72,7 @@
     <Compile Include="clases\clsunidad.cs" />
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
+    <Compile Include="clases\clsvalidar.cs" />
     <Compile Include="dsInsumosp.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -335,6 +336,12 @@
     </Compile>
     <Compile Include="reportes\frmrepoventas.Designer.cs">
       <DependentUpon>frmrepoventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilerias\Validacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilerias\Validacion.Designer.cs">
+      <DependentUpon>Validacion.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="busquedas\frmbusquedaclientes.resx">
       <DependentUpon>frmbusquedaclientes.cs</DependentUpon>

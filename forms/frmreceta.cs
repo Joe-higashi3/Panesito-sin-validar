@@ -28,5 +28,11 @@ namespace WindowsFormsApp2.forms
 
         }
 
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+
+            
+
+        }
     }
 }

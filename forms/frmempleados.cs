@@ -108,7 +108,37 @@ namespace WindowsFormsApp2.forms
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            GuardarEmpleado();
+
+            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == false)
+
+            {
+                MessageBox.Show("Ha ocurrido un error");
+                limpiar();
+
+
+
+            }
+
+            else if (clsvalidar.ValidarCamposVaciosYNumeros(this, errorValidacion) == false)
+            {
+
+
+                MessageBox.Show("Ha ocurrido un error");
+                limpiar();
+
+            }
+
+            else
+            {
+
+
+                GuardarEmpleado();
+
+            }
+            
+
+
+
         }
 
         private void btncancelar_Click(object sender, EventArgs e)

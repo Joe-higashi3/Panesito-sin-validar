@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmrol));
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.txttipo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panesitorol = new WindowsFormsApp2.panesitorol();
@@ -41,22 +41,26 @@
             this.dgvrol = new System.Windows.Forms.DataGridView();
             this.ridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rtipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panesitorol1 = new WindowsFormsApp2.panesitorol1();
             this.rOLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.panesitorol1 = new WindowsFormsApp2.panesitorol1();
             this.rOLTableAdapter1 = new WindowsFormsApp2.panesitorol1TableAdapters.ROLTableAdapter();
+            this.txttipo = new WindowsFormsApp2.Utilerias.Validacion();
+            this.errorValidar = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panesitorol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvrol)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panesitorol1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitorol1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorValidar)).BeginInit();
             this.SuspendLayout();
             // 
             // btncancelar
             // 
             this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelar.Location = new System.Drawing.Point(664, 160);
+            this.btncancelar.Location = new System.Drawing.Point(498, 130);
+            this.btncancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(154, 39);
+            this.btncancelar.Size = new System.Drawing.Size(116, 32);
             this.btncancelar.TabIndex = 50;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
@@ -65,9 +69,10 @@
             // btnguardar
             // 
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.Location = new System.Drawing.Point(487, 160);
+            this.btnguardar.Location = new System.Drawing.Point(365, 130);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(154, 39);
+            this.btnguardar.Size = new System.Drawing.Size(116, 32);
             this.btnguardar.TabIndex = 49;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
@@ -77,26 +82,20 @@
             // 
             this.txtid.Enabled = false;
             this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtid.Location = new System.Drawing.Point(316, 55);
+            this.txtid.Location = new System.Drawing.Point(237, 45);
+            this.txtid.Margin = new System.Windows.Forms.Padding(2);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(63, 30);
+            this.txtid.Size = new System.Drawing.Size(48, 26);
             this.txtid.TabIndex = 53;
-            // 
-            // txttipo
-            // 
-            this.txttipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttipo.Location = new System.Drawing.Point(316, 92);
-            this.txttipo.Name = "txttipo";
-            this.txttipo.Size = new System.Drawing.Size(337, 30);
-            this.txttipo.TabIndex = 48;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 95);
+            this.label2.Location = new System.Drawing.Point(134, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 25);
+            this.label2.Size = new System.Drawing.Size(108, 20);
             this.label2.TabIndex = 52;
             this.label2.Text = "Tipo De Rol:";
             // 
@@ -104,9 +103,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(270, 58);
+            this.label1.Location = new System.Drawing.Point(202, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 25);
+            this.label1.Size = new System.Drawing.Size(33, 20);
             this.label1.TabIndex = 51;
             this.label1.Text = "ID:";
             // 
@@ -134,12 +134,13 @@
             this.ridDataGridViewTextBoxColumn,
             this.rtipoDataGridViewTextBoxColumn});
             this.dgvrol.DataSource = this.rOLBindingSource1;
-            this.dgvrol.Location = new System.Drawing.Point(176, 221);
+            this.dgvrol.Location = new System.Drawing.Point(132, 180);
+            this.dgvrol.Margin = new System.Windows.Forms.Padding(2);
             this.dgvrol.Name = "dgvrol";
             this.dgvrol.ReadOnly = true;
             this.dgvrol.RowTemplate.Height = 24;
             this.dgvrol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvrol.Size = new System.Drawing.Size(642, 198);
+            this.dgvrol.Size = new System.Drawing.Size(482, 161);
             this.dgvrol.TabIndex = 54;
             this.dgvrol.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvrol_CellContentClick);
             // 
@@ -158,40 +159,58 @@
             this.rtipoDataGridViewTextBoxColumn.ReadOnly = true;
             this.rtipoDataGridViewTextBoxColumn.Width = 500;
             // 
-            // panesitorol1
-            // 
-            this.panesitorol1.DataSetName = "panesitorol1";
-            this.panesitorol1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // rOLBindingSource1
             // 
             this.rOLBindingSource1.DataMember = "ROL";
             this.rOLBindingSource1.DataSource = this.panesitorol1;
             // 
+            // panesitorol1
+            // 
+            this.panesitorol1.DataSetName = "panesitorol1";
+            this.panesitorol1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // rOLTableAdapter1
             // 
             this.rOLTableAdapter1.ClearBeforeFill = true;
             // 
+            // txttipo
+            // 
+            this.txttipo.Location = new System.Drawing.Point(247, 83);
+            this.txttipo.Name = "txttipo";
+            this.txttipo.Size = new System.Drawing.Size(154, 20);
+            this.txttipo.SoloLetras = true;
+            this.txttipo.SoloNumeros = false;
+            this.txttipo.TabIndex = 55;
+            this.txttipo.Validar = true;
+            this.txttipo.VRFC = false;
+            // 
+            // errorValidar
+            // 
+            this.errorValidar.ContainerControl = this;
+            this.errorValidar.Icon = ((System.Drawing.Icon)(resources.GetObject("errorValidar.Icon")));
+            // 
             // frmrol
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 703);
+            this.ClientSize = new System.Drawing.Size(975, 571);
+            this.Controls.Add(this.txttipo);
             this.Controls.Add(this.dgvrol);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.txtid);
-            this.Controls.Add(this.txttipo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmrol";
             this.Text = "frmrol";
             this.Load += new System.EventHandler(this.frmrol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panesitorol)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvrol)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panesitorol1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitorol1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorValidar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +221,6 @@
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.TextBox txttipo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private panesitorol panesitorol;
@@ -214,5 +232,7 @@
         private panesitorol1 panesitorol1;
         private System.Windows.Forms.BindingSource rOLBindingSource1;
         private panesitorol1TableAdapters.ROLTableAdapter rOLTableAdapter1;
+        private Utilerias.Validacion txttipo;
+        private System.Windows.Forms.ErrorProvider errorValidar;
     }
 }
