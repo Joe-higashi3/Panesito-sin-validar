@@ -80,32 +80,18 @@ namespace WindowsFormsApp2.forms
         private void btnguardar_Click(object sender, EventArgs e)
         {
 
-            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == false)
 
+            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == true)
             {
                 MessageBox.Show("Ha ocurrido un error");
                 limpiar();
-
-
-
-            }
-
-            else if (clsvalidar.ValidarCamposVaciosYNumeros(this, errorValidacion) == false)
-            {
-
-
-                MessageBox.Show("Ha ocurrido un error");
-                limpiar();
-
             }
 
             else
             {
-
-
                 GuardarUnidad();
-
             }
+
 
 
         }
@@ -114,6 +100,33 @@ namespace WindowsFormsApp2.forms
         {
             txtidunidad.Text = this.panesitoUnidad1.UNIDAD[uNIDADBindingSource.Position].un_id_unidad.ToString();
             txtdescunidad.Text = this.panesitoUnidad1.UNIDAD[uNIDADBindingSource.Position].un_descripcion.ToString();
+        }
+
+        private bool ValidarNumeros(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("¡Ingrese Solo Numeros!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+
+        private bool ValidarLetras(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                //errorNombre.SetError(txtnombre, "Ingrese solo Letras");
+                MessageBox.Show("¡Ingrese Solo Letras!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+
+        private void txtdescunidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtdescunidad.Focus();
         }
     }
 }

@@ -39,6 +39,7 @@ namespace WindowsFormsApp2.forms
             //this.mUNICIPIOTableAdapter.Fill(this.panesitoDataSet5.MUNICIPIO);
             txttelefono.Focus();
             consecutivo();
+            cmbstatus.SelectedIndex = 0;
         }
 
         private void GuardarEmpleado()
@@ -109,33 +110,17 @@ namespace WindowsFormsApp2.forms
         private void btnguardar_Click(object sender, EventArgs e)
         {
 
-            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == false)
-
+            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == true)
             {
                 MessageBox.Show("Ha ocurrido un error");
                 limpiar();
-
-
-
-            }
-
-            else if (clsvalidar.ValidarCamposVaciosYNumeros(this, errorValidacion) == false)
-            {
-
-
-                MessageBox.Show("Ha ocurrido un error");
-                limpiar();
-
             }
 
             else
             {
-
-
                 GuardarEmpleado();
-
             }
-            
+
 
 
 
@@ -174,6 +159,80 @@ namespace WindowsFormsApp2.forms
                     cmbstatus.Text = "Activo";
                     break;
             }
+        }
+
+        private bool ValidarNumeros(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("¡Ingrese Solo Numeros!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+
+        private bool ValidarLetras(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                //errorNombre.SetError(txtnombre, "Ingrese solo Letras");
+                MessageBox.Show("¡Ingrese Solo Letras!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+
+        private void txttelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarNumeros(sender, e);
+            txttelefono.Focus();
+        }
+
+        private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtusuario.Focus();
+        }
+
+        private void txtcontraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtapaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtapaterno.Focus();
+        }
+
+        private void txtamaterno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtamaterno.Focus();
+        }
+
+        private void txtcolonia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtcolonia.Focus();
+        }
+
+        private void txtinterior_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarNumeros(sender, e);
+            txtinterior.Focus();
+        }
+
+        private void txtexterior_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarNumeros(sender, e);
+            txtinterior.Focus();
+        }
+
+        private void txtcalle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtcalle.Focus();
         }
     }
 }

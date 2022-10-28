@@ -59,10 +59,10 @@
             // btncancelar
             // 
             this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelar.Location = new System.Drawing.Point(498, 130);
-            this.btncancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btncancelar.Location = new System.Drawing.Point(664, 160);
+            this.btncancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(116, 32);
+            this.btncancelar.Size = new System.Drawing.Size(155, 39);
             this.btncancelar.TabIndex = 50;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
@@ -71,10 +71,10 @@
             // btnguardar
             // 
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.Location = new System.Drawing.Point(365, 130);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnguardar.Location = new System.Drawing.Point(487, 160);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(116, 32);
+            this.btnguardar.Size = new System.Drawing.Size(155, 39);
             this.btnguardar.TabIndex = 49;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
@@ -84,20 +84,19 @@
             // 
             this.txtid.Enabled = false;
             this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtid.Location = new System.Drawing.Point(237, 45);
-            this.txtid.Margin = new System.Windows.Forms.Padding(2);
+            this.txtid.Location = new System.Drawing.Point(316, 55);
+            this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(48, 26);
+            this.txtid.Size = new System.Drawing.Size(63, 30);
             this.txtid.TabIndex = 53;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(134, 83);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(179, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 20);
+            this.label2.Size = new System.Drawing.Size(132, 25);
             this.label2.TabIndex = 52;
             this.label2.Text = "Tipo De Rol:";
             // 
@@ -105,10 +104,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(202, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(269, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 20);
+            this.label1.Size = new System.Drawing.Size(40, 25);
             this.label1.TabIndex = 51;
             this.label1.Text = "ID:";
             // 
@@ -136,13 +134,13 @@
             this.ridDataGridViewTextBoxColumn,
             this.rtipoDataGridViewTextBoxColumn});
             this.dgvrol.DataSource = this.rOLBindingSource1;
-            this.dgvrol.Location = new System.Drawing.Point(132, 180);
-            this.dgvrol.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvrol.Location = new System.Drawing.Point(176, 222);
+            this.dgvrol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvrol.Name = "dgvrol";
             this.dgvrol.ReadOnly = true;
             this.dgvrol.RowTemplate.Height = 24;
             this.dgvrol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvrol.Size = new System.Drawing.Size(482, 161);
+            this.dgvrol.Size = new System.Drawing.Size(643, 198);
             this.dgvrol.TabIndex = 54;
             this.dgvrol.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvrol_CellContentClick);
             // 
@@ -177,14 +175,18 @@
             // 
             // txttipo
             // 
-            this.txttipo.Location = new System.Drawing.Point(247, 83);
+            this.txttipo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txttipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttipo.Location = new System.Drawing.Point(329, 102);
+            this.txttipo.Margin = new System.Windows.Forms.Padding(4);
             this.txttipo.Name = "txttipo";
-            this.txttipo.Size = new System.Drawing.Size(154, 20);
-            this.txttipo.SoloLetras = true;
+            this.txttipo.Size = new System.Drawing.Size(204, 34);
+            this.txttipo.SoloLetras = false;
             this.txttipo.SoloNumeros = false;
             this.txttipo.TabIndex = 55;
             this.txttipo.Validar = true;
             this.txttipo.VRFC = false;
+            this.txttipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttipo_KeyPress);
             // 
             // errorValidar
             // 
@@ -197,9 +199,9 @@
             // 
             // frmrol
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 571);
+            this.ClientSize = new System.Drawing.Size(1300, 703);
             this.Controls.Add(this.txttipo);
             this.Controls.Add(this.dgvrol);
             this.Controls.Add(this.btncancelar);
@@ -207,7 +209,7 @@
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmrol";
             this.Text = "frmrol";
             this.Load += new System.EventHandler(this.frmrol_Load);

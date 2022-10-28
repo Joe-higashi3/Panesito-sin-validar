@@ -51,9 +51,10 @@
             // 
             // btncancelar
             // 
-            this.btncancelar.Location = new System.Drawing.Point(684, 134);
+            this.btncancelar.Location = new System.Drawing.Point(912, 165);
+            this.btncancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(75, 23);
+            this.btncancelar.Size = new System.Drawing.Size(100, 28);
             this.btncancelar.TabIndex = 13;
             this.btncancelar.Text = "CANCELAR";
             this.btncancelar.UseVisualStyleBackColor = true;
@@ -62,9 +63,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 105);
+            this.label2.Location = new System.Drawing.Point(71, 129);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(40, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Tipo:";
             // 
@@ -78,11 +80,12 @@
             this.tmidDataGridViewTextBoxColumn,
             this.tmtipoDataGridViewTextBoxColumn});
             this.dgvtm.DataSource = this.tIPOMOVBindingSource;
-            this.dgvtm.Location = new System.Drawing.Point(41, 191);
+            this.dgvtm.Location = new System.Drawing.Point(55, 235);
+            this.dgvtm.Margin = new System.Windows.Forms.Padding(4);
             this.dgvtm.Name = "dgvtm";
             this.dgvtm.ReadOnly = true;
             this.dgvtm.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvtm.Size = new System.Drawing.Size(718, 209);
+            this.dgvtm.Size = new System.Drawing.Size(957, 257);
             this.dgvtm.TabIndex = 10;
             this.dgvtm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtm_CellContentClick);
             // 
@@ -113,25 +116,28 @@
             // txtidtm
             // 
             this.txtidtm.Enabled = false;
-            this.txtidtm.Location = new System.Drawing.Point(90, 50);
+            this.txtidtm.Location = new System.Drawing.Point(120, 62);
+            this.txtidtm.Margin = new System.Windows.Forms.Padding(4);
             this.txtidtm.Name = "txtidtm";
-            this.txtidtm.Size = new System.Drawing.Size(100, 20);
+            this.txtidtm.Size = new System.Drawing.Size(132, 22);
             this.txtidtm.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 53);
+            this.label1.Location = new System.Drawing.Point(91, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.Size = new System.Drawing.Size(23, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Id:";
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(567, 134);
+            this.btnguardar.Location = new System.Drawing.Point(756, 165);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(75, 23);
+            this.btnguardar.Size = new System.Drawing.Size(100, 28);
             this.btnguardar.TabIndex = 7;
             this.btnguardar.Text = "GUARDAR";
             this.btnguardar.UseVisualStyleBackColor = true;
@@ -143,14 +149,17 @@
             // 
             // txttm
             // 
-            this.txttm.Location = new System.Drawing.Point(90, 102);
+            this.txttm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txttm.Location = new System.Drawing.Point(120, 126);
+            this.txttm.Margin = new System.Windows.Forms.Padding(4);
             this.txttm.Name = "txttm";
-            this.txttm.Size = new System.Drawing.Size(169, 20);
-            this.txttm.SoloLetras = true;
+            this.txttm.Size = new System.Drawing.Size(224, 22);
+            this.txttm.SoloLetras = false;
             this.txttm.SoloNumeros = false;
             this.txttm.TabIndex = 14;
             this.txttm.Validar = true;
             this.txttm.VRFC = false;
+            this.txttm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttm_KeyPress);
             // 
             // errorValidacion
             // 
@@ -159,9 +168,9 @@
             // 
             // frmtipomov
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.txttm);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.label2);
@@ -169,7 +178,7 @@
             this.Controls.Add(this.txtidtm);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnguardar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmtipomov";
             this.Text = "frmtipomov";
             this.Load += new System.EventHandler(this.frmtipomov_Load);

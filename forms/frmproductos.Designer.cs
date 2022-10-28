@@ -79,7 +79,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(500, 7);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 20);
+            this.label7.Size = new System.Drawing.Size(87, 25);
             this.label7.TabIndex = 69;
             this.label7.Text = "Unidad:";
             // 
@@ -91,7 +91,7 @@
             this.cbxunidad.FormattingEnabled = true;
             this.cbxunidad.Location = new System.Drawing.Point(593, 4);
             this.cbxunidad.Name = "cbxunidad";
-            this.cbxunidad.Size = new System.Drawing.Size(159, 28);
+            this.cbxunidad.Size = new System.Drawing.Size(159, 33);
             this.cbxunidad.TabIndex = 64;
             this.cbxunidad.ValueMember = "un_id_unidad";
             // 
@@ -113,7 +113,7 @@
             this.cbxcategoria.FormattingEnabled = true;
             this.cbxcategoria.Location = new System.Drawing.Point(150, 117);
             this.cbxcategoria.Name = "cbxcategoria";
-            this.cbxcategoria.Size = new System.Drawing.Size(302, 28);
+            this.cbxcategoria.Size = new System.Drawing.Size(302, 33);
             this.cbxcategoria.TabIndex = 63;
             this.cbxcategoria.ValueMember = "ca_id";
             // 
@@ -136,7 +136,7 @@
             "Deshabilitado"});
             this.cmbxstatus.Location = new System.Drawing.Point(593, 53);
             this.cmbxstatus.Name = "cmbxstatus";
-            this.cmbxstatus.Size = new System.Drawing.Size(159, 28);
+            this.cmbxstatus.Size = new System.Drawing.Size(159, 33);
             this.cmbxstatus.TabIndex = 65;
             // 
             // label6
@@ -144,7 +144,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(500, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 20);
+            this.label6.Size = new System.Drawing.Size(81, 25);
             this.label6.TabIndex = 60;
             this.label6.Text = "Status:";
             // 
@@ -153,7 +153,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(44, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 20);
+            this.label5.Size = new System.Drawing.Size(94, 25);
             this.label5.TabIndex = 59;
             this.label5.Text = "Nombre:";
             // 
@@ -182,7 +182,7 @@
             this.txtid.Enabled = false;
             this.txtid.Location = new System.Drawing.Point(150, 12);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(78, 26);
+            this.txtid.Size = new System.Drawing.Size(78, 30);
             this.txtid.TabIndex = 57;
             // 
             // label4
@@ -190,7 +190,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(28, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 20);
+            this.label4.Size = new System.Drawing.Size(113, 25);
             this.label4.TabIndex = 56;
             this.label4.Text = "Categoria:";
             // 
@@ -199,7 +199,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(234, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 20);
+            this.label3.Size = new System.Drawing.Size(80, 25);
             this.label3.TabIndex = 55;
             this.label3.Text = "Precio:";
             // 
@@ -208,7 +208,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 20);
+            this.label2.Size = new System.Drawing.Size(132, 25);
             this.label2.TabIndex = 54;
             this.label2.Text = "Descripcion:";
             // 
@@ -217,7 +217,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(104, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 20);
+            this.label1.Size = new System.Drawing.Size(40, 25);
             this.label1.TabIndex = 53;
             this.label1.Text = "ID:";
             // 
@@ -266,7 +266,7 @@
             this.pridproductoDataGridViewTextBoxColumn.HeaderText = "pr_id_producto";
             this.pridproductoDataGridViewTextBoxColumn.Name = "pridproductoDataGridViewTextBoxColumn";
             this.pridproductoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pridproductoDataGridViewTextBoxColumn.Width = 155;
+            this.pridproductoDataGridViewTextBoxColumn.Width = 185;
             // 
             // prnombreDataGridViewTextBoxColumn
             // 
@@ -274,7 +274,7 @@
             this.prnombreDataGridViewTextBoxColumn.HeaderText = "pr_nombre";
             this.prnombreDataGridViewTextBoxColumn.Name = "prnombreDataGridViewTextBoxColumn";
             this.prnombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prnombreDataGridViewTextBoxColumn.Width = 120;
+            this.prnombreDataGridViewTextBoxColumn.Width = 144;
             // 
             // pr_descripcion
             // 
@@ -282,7 +282,7 @@
             this.pr_descripcion.HeaderText = "pr_descripcion";
             this.pr_descripcion.Name = "pr_descripcion";
             this.pr_descripcion.ReadOnly = true;
-            this.pr_descripcion.Width = 151;
+            this.pr_descripcion.Width = 182;
             // 
             // ca_descripcion
             // 
@@ -290,7 +290,7 @@
             this.ca_descripcion.HeaderText = "ca_descripcion";
             this.ca_descripcion.Name = "ca_descripcion";
             this.ca_descripcion.ReadOnly = true;
-            this.ca_descripcion.Width = 154;
+            this.ca_descripcion.Width = 186;
             // 
             // un_descripcion
             // 
@@ -298,7 +298,7 @@
             this.un_descripcion.HeaderText = "un_descripcion";
             this.un_descripcion.Name = "un_descripcion";
             this.un_descripcion.ReadOnly = true;
-            this.un_descripcion.Width = 155;
+            this.un_descripcion.Width = 187;
             // 
             // prprecioDataGridViewTextBoxColumn
             // 
@@ -306,7 +306,7 @@
             this.prprecioDataGridViewTextBoxColumn.HeaderText = "pr_precio";
             this.prprecioDataGridViewTextBoxColumn.Name = "prprecioDataGridViewTextBoxColumn";
             this.prprecioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prprecioDataGridViewTextBoxColumn.Width = 109;
+            this.prprecioDataGridViewTextBoxColumn.Width = 131;
             // 
             // prstatusDataGridViewTextBoxColumn
             // 
@@ -314,7 +314,7 @@
             this.prstatusDataGridViewTextBoxColumn.HeaderText = "pr_status";
             this.prstatusDataGridViewTextBoxColumn.Name = "prstatusDataGridViewTextBoxColumn";
             this.prstatusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prstatusDataGridViewTextBoxColumn.Width = 110;
+            this.prstatusDataGridViewTextBoxColumn.Width = 130;
             // 
             // cATEGORIATableAdapter
             // 
@@ -328,34 +328,39 @@
             // 
             this.txtprecio.Location = new System.Drawing.Point(304, 12);
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(148, 26);
+            this.txtprecio.Size = new System.Drawing.Size(148, 30);
             this.txtprecio.SoloLetras = false;
-            this.txtprecio.SoloNumeros = true;
+            this.txtprecio.SoloNumeros = false;
             this.txtprecio.TabIndex = 71;
             this.txtprecio.Validar = true;
             this.txtprecio.VRFC = false;
+            this.txtprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecio_KeyPress);
             // 
             // txtnombre
             // 
+            this.txtnombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtnombre.Location = new System.Drawing.Point(150, 50);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(302, 26);
+            this.txtnombre.Size = new System.Drawing.Size(302, 30);
             this.txtnombre.SoloLetras = false;
             this.txtnombre.SoloNumeros = true;
             this.txtnombre.TabIndex = 72;
             this.txtnombre.Validar = true;
             this.txtnombre.VRFC = false;
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
             // 
             // txtdescripcion
             // 
+            this.txtdescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtdescripcion.Location = new System.Drawing.Point(150, 79);
             this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(302, 26);
+            this.txtdescripcion.Size = new System.Drawing.Size(302, 30);
             this.txtdescripcion.SoloLetras = true;
             this.txtdescripcion.SoloNumeros = false;
             this.txtdescripcion.TabIndex = 73;
             this.txtdescripcion.Validar = true;
             this.txtdescripcion.VRFC = false;
+            this.txtdescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdescripcion_KeyPress);
             // 
             // errorValidacion
             // 
@@ -364,7 +369,7 @@
             // 
             // frmproductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(923, 505);
             this.Controls.Add(this.txtdescripcion);

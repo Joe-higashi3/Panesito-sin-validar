@@ -34,5 +34,10 @@ namespace WindowsFormsApp2.forms
             
 
         }
+
+        private void txt_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

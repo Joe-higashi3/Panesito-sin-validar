@@ -31,10 +31,8 @@ namespace WindowsFormsApp2.clases
 
                         if (string.IsNullOrEmpty(Obj.Text.Trim()))
                         {
-
                             ErroProvider.SetError(Obj, "No Puede Estar Vacio");
                             ExErrores = true;
-
                         }
 
                     }
@@ -80,7 +78,7 @@ namespace WindowsFormsApp2.clases
 
         }
 
-
+        
         public static Boolean ValidarCamposVaciosYNumeros(Control Objeto, ErrorProvider ErroProviderdos)
         {
 
@@ -96,7 +94,7 @@ namespace WindowsFormsApp2.clases
                     Validacion Obj = (Validacion)Item;
 
 
-                    if (Obj.Validar == true)
+                    /*if (Obj.Validar == true)
                     {
 
                         if (string.IsNullOrEmpty(Obj.Text.Trim()))
@@ -107,7 +105,7 @@ namespace WindowsFormsApp2.clases
 
                         }
 
-                    }
+                    }*/
 
                     if (Obj.SoloNumeros == true)
                     {

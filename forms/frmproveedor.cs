@@ -32,6 +32,7 @@ namespace WindowsFormsApp2.forms
             this.pROVEEDORTableAdapter.Fill(this.panesitoProveedores.PROVEEDOR);
             txttelefono.Focus();
             consecutivo();
+            cbxstatus.SelectedIndex = 0;
         }
         private void Guardar_proveedor()
         {
@@ -71,7 +72,7 @@ namespace WindowsFormsApp2.forms
 
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT ISNULL(MAX(pdr_id),0) + 1 AS consecutivo FROM PROVEEDOR";
-            
+
             conn.Open();
             l = cmd.ExecuteReader();
             if (l.Read())
@@ -129,31 +130,16 @@ namespace WindowsFormsApp2.forms
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == false)
 
+            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == true)
             {
                 MessageBox.Show("Ha ocurrido un error");
                 limpiar();
-
-
-
-            }
-
-            else if (clsvalidar.ValidarCamposVaciosYNumeros(this, errorValidacion) == false)
-            {
-
-
-                MessageBox.Show("Ha ocurrido un error");
-                limpiar();
-
             }
 
             else
             {
-
-
                 Guardar_proveedor();
-
             }
 
 
@@ -164,6 +150,80 @@ namespace WindowsFormsApp2.forms
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+        private bool ValidarNumeros(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("¡Ingrese Solo Numeros!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+
+        private bool ValidarLetras(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                //errorNombre.SetError(txtnombre, "Ingrese solo Letras");
+                MessageBox.Show("¡Ingrese Solo Letras!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+       
+            private void txttelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarNumeros(sender, e);
+            txttelefono.Focus();
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtnombre.Focus();
+        }
+
+        private void txtapellidop_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtapellidop.Focus();
+        }
+
+        private void txtapellidom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtapellidom.Focus();
+        }
+
+        private void txtcolonia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtcolonia.Focus();
+        }
+
+        private void txtrazon_social_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtrazon_social.Focus();
+        }
+
+        private void txtnumint_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarNumeros(sender, e);
+            txtnumint.Focus();
+        }
+
+        private void txtnumext_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarNumeros(sender, e);
+            txtnumext.Focus();
+        }
+
+        private void txtcalle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtcalle.Focus();
         }
     }
 }

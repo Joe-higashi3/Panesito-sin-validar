@@ -33,6 +33,7 @@ namespace WindowsFormsApp2.forms
             this.pRODUCTOTableAdapter.Fill(this.panesitoProducto.PRODUCTO);
 
             consecutivo();
+            cmbxstatus.SelectedIndex = 0;
         }
 
         private void GuardarProducto()
@@ -116,37 +117,16 @@ namespace WindowsFormsApp2.forms
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
 
-            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == false)
-
+            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == true)
             {
                 MessageBox.Show("Ha ocurrido un error");
                 limpiar();
-
-
-
-            }
-
-            else if (clsvalidar.ValidarCamposVaciosYNumeros(this, errorValidacion) == false)
-            {
-
-
-                MessageBox.Show("Ha ocurrido un error");
-                limpiar();
-
             }
 
             else
             {
-
-
                 GuardarProducto();
-
             }
-
-
-
-            
-
 
 
         }
@@ -154,6 +134,47 @@ namespace WindowsFormsApp2.forms
         private void btncancelar_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+
+
+        private bool ValidarNumeros(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("¡Ingrese Solo Numeros!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+
+        private bool ValidarLetras(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                //errorNombre.SetError(txtnombre, "Ingrese solo Letras");
+                MessageBox.Show("¡Ingrese Solo Letras!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+
+        private void txtprecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarNumeros(sender, e);
+            txtprecio.Focus();
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtnombre.Focus();
+        }
+
+        private void txtdescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtdescripcion.Focus();
         }
     }
 }

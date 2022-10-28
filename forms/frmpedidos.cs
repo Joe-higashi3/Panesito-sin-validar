@@ -22,5 +22,17 @@ namespace WindowsFormsApp2
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm:ss";
         }
+
+        private void txtdescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                //errorNombre.SetError(txtnombre, "Ingrese solo Letras");
+                MessageBox.Show("Ingrese Solo Letras");
+                txtdescripcion.Clear();
+                txtdescripcion.Focus();
+            }
+        }
     }
 }

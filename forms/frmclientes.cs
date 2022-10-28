@@ -35,32 +35,34 @@ namespace WindowsFormsApp2.forms
             //this.cLIENTETableAdapter.Fill(this.panesitoDataSet.CLIENTE);
             txttelefono.Focus();
             consecutivo();
+            cmbxstatus.SelectedIndex = 0;
         }
 
         private void GuardarCliente()
         {
-            clscliente cliente = new clscliente();
-            cliente.iIdcliente = Convert.ToInt32(txtid.Text);
-            cliente.sNombre = txtnombre.Text;
-            cliente.sApellido_p = txtapellidop.Text;
-            cliente.sApellido_m = txtapellidom.Text;
-            cliente.sTelefono = txttelefono.Text;
-            cliente.sCalle = txtcalle.Text;
-            cliente.sNum_int = txtnumint.Text;
-            cliente.sNum_ext = txtnumext.Text;
-            cliente.sColonia = txtcolonia.Text;
-            cliente.iMunicipio = Convert.ToInt32(cmbxMunicipio.SelectedValue);
-            cliente.sStatus = cmbxstatus.Text.Substring(0,1);
-            if (cliente.Guardar() == true)
-            {
-                MessageBox.Show("Sus Datos se guardaron correctamente");
-                limpiar();
-            }
-            else
-            {
-                MessageBox.Show("Sus Datos no se pudieron guardar error: "+ cliente.error);
-                
-            }
+                clscliente cliente = new clscliente();
+                cliente.iIdcliente = Convert.ToInt32(txtid.Text);
+                cliente.sNombre = txtnombre.Text;
+                cliente.sApellido_p = txtapellidop.Text;
+                cliente.sApellido_m = txtapellidom.Text;
+                cliente.sTelefono = txttelefono.Text;
+                cliente.sCalle = txtcalle.Text;
+                cliente.sNum_int = txtnumint.Text;
+                cliente.sNum_ext = txtnumext.Text;
+                cliente.sColonia = txtcolonia.Text;
+                cliente.iMunicipio = Convert.ToInt32(cmbxMunicipio.SelectedValue);
+                cliente.sStatus = cmbxstatus.Text.Substring(0, 1);
+                if (cliente.Guardar() == true)
+                {
+                    MessageBox.Show("Sus Datos se guardaron correctamente");
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("Sus Datos no se pudieron guardar error: " + cliente.error);
+
+                }
+            
         }
         private void consecutivo()
         {
@@ -96,39 +98,23 @@ namespace WindowsFormsApp2.forms
             this.cLIENTETableAdapter2.Fill(this.panesitoDataSet2.CLIENTE);
         }
 
-        private void btnguardar_Click(object sender, EventArgs e)
-        {
-
-            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == false)
-
+            private void btnguardar_Click(object sender, EventArgs e)
+            {
+            if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == true)
             {
                 MessageBox.Show("Ha ocurrido un error");
                 limpiar();
-
-
-
-            }
-
-            else if (clsvalidar.ValidarCamposVaciosYNumeros(this, errorValidacion) == false)
+            }   
+            /*else if (clsvalidar.ValidarCamposVaciosYNumeros(this, errorValidacionn) == false)
             {
-
-
                 MessageBox.Show("Ha ocurrido un error");
                 limpiar();
-
-            }
-
+            }*/
             else
             {
-
-
                 GuardarCliente();
-
             }
-            
-
-
-        }
+            }
 
         private void txtid_KeyUp(object sender, KeyEventArgs e)
         {
@@ -170,6 +156,105 @@ namespace WindowsFormsApp2.forms
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+        private bool ValidarNumeros(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("¡Ingrese Solo Numeros!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+
+        private bool ValidarLetras(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                //errorNombre.SetError(txtnombre, "Ingrese solo Letras");
+                MessageBox.Show("¡Ingrese Solo Letras!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender,e);
+            txtnombre.Focus();
+        }
+
+
+        private void txtapellidop_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtapellidop.Focus();
+        }
+
+
+        private void txtcalle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarLetras(sender, e);
+            txtcalle.Focus();
+        }
+
+        private void txttelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarNumeros(sender, e);
+            txttelefono.Focus();
+        }
+
+        private void txtnumint_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarNumeros(sender, e);
+            txtnumint.Focus();
+        }
+
+        private void txtnumext_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarNumeros(sender, e);
+            txtnumext.Focus();
+        }
+
+        private void txttelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtapellidop_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtapellidom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcolonia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnumint_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcalle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnumext_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

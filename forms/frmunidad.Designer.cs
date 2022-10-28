@@ -51,9 +51,10 @@
             // 
             // btncancelar
             // 
-            this.btncancelar.Location = new System.Drawing.Point(356, 126);
+            this.btncancelar.Location = new System.Drawing.Point(475, 155);
+            this.btncancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(93, 32);
+            this.btncancelar.Size = new System.Drawing.Size(124, 39);
             this.btncancelar.TabIndex = 13;
             this.btncancelar.Text = "CANCELAR";
             this.btncancelar.UseVisualStyleBackColor = true;
@@ -62,34 +63,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 83);
+            this.label2.Location = new System.Drawing.Point(56, 102);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Unidad:";
             // 
             // txtidunidad
             // 
             this.txtidunidad.Enabled = false;
-            this.txtidunidad.Location = new System.Drawing.Point(92, 37);
+            this.txtidunidad.Location = new System.Drawing.Point(123, 46);
+            this.txtidunidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtidunidad.Name = "txtidunidad";
-            this.txtidunidad.Size = new System.Drawing.Size(51, 20);
+            this.txtidunidad.Size = new System.Drawing.Size(67, 22);
             this.txtidunidad.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 40);
+            this.label1.Location = new System.Drawing.Point(91, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 9;
             this.label1.Text = "ID:";
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(240, 126);
+            this.btnguardar.Location = new System.Drawing.Point(320, 155);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(96, 32);
+            this.btnguardar.Size = new System.Drawing.Size(128, 39);
             this.btnguardar.TabIndex = 8;
             this.btnguardar.Text = "GUARDAR";
             this.btnguardar.UseVisualStyleBackColor = true;
@@ -105,10 +110,11 @@
             this.unidunidadDataGridViewTextBoxColumn,
             this.undescripcionDataGridViewTextBoxColumn});
             this.dgvunidad.DataSource = this.uNIDADBindingSource;
-            this.dgvunidad.Location = new System.Drawing.Point(-1, 235);
+            this.dgvunidad.Location = new System.Drawing.Point(-1, 289);
+            this.dgvunidad.Margin = new System.Windows.Forms.Padding(4);
             this.dgvunidad.Name = "dgvunidad";
             this.dgvunidad.ReadOnly = true;
-            this.dgvunidad.Size = new System.Drawing.Size(858, 199);
+            this.dgvunidad.Size = new System.Drawing.Size(1144, 245);
             this.dgvunidad.TabIndex = 7;
             this.dgvunidad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvunidad_CellContentClick);
             // 
@@ -142,14 +148,17 @@
             // 
             // txtdescunidad
             // 
-            this.txtdescunidad.Location = new System.Drawing.Point(92, 80);
+            this.txtdescunidad.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtdescunidad.Location = new System.Drawing.Point(123, 98);
+            this.txtdescunidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtdescunidad.Name = "txtdescunidad";
-            this.txtdescunidad.Size = new System.Drawing.Size(100, 20);
+            this.txtdescunidad.Size = new System.Drawing.Size(132, 22);
             this.txtdescunidad.SoloLetras = false;
-            this.txtdescunidad.SoloNumeros = true;
+            this.txtdescunidad.SoloNumeros = false;
             this.txtdescunidad.TabIndex = 14;
             this.txtdescunidad.Validar = true;
             this.txtdescunidad.VRFC = false;
+            this.txtdescunidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdescunidad_KeyPress);
             // 
             // errorValidacion
             // 
@@ -158,9 +167,9 @@
             // 
             // frmunidad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 433);
+            this.ClientSize = new System.Drawing.Size(1144, 533);
             this.Controls.Add(this.txtdescunidad);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.label2);
@@ -168,7 +177,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.dgvunidad);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmunidad";
             this.Text = "frmunidad";
             this.Load += new System.EventHandler(this.frmunidad_Load);

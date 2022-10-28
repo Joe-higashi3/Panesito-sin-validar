@@ -147,9 +147,10 @@ namespace WindowsFormsApp2.forms
             this.cmbxunidad.DisplayMember = "un_descripcion";
             this.cmbxunidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxunidad.FormattingEnabled = true;
-            this.cmbxunidad.Location = new System.Drawing.Point(351, 93);
+            this.cmbxunidad.Location = new System.Drawing.Point(468, 114);
+            this.cmbxunidad.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxunidad.Name = "cmbxunidad";
-            this.cmbxunidad.Size = new System.Drawing.Size(121, 21);
+            this.cmbxunidad.Size = new System.Drawing.Size(160, 24);
             this.cmbxunidad.TabIndex = 31;
             this.cmbxunidad.ValueMember = "un_id_unidad";
             // 
@@ -166,9 +167,10 @@ namespace WindowsFormsApp2.forms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(301, 96);
+            this.label6.Location = new System.Drawing.Point(401, 118);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.Size = new System.Drawing.Size(57, 17);
             this.label6.TabIndex = 40;
             this.label6.Text = "Unidad:";
             // 
@@ -179,25 +181,28 @@ namespace WindowsFormsApp2.forms
             this.cmbxistatus.Items.AddRange(new object[] {
             "Activo",
             "Cancelado"});
-            this.cmbxistatus.Location = new System.Drawing.Point(597, 28);
+            this.cmbxistatus.Location = new System.Drawing.Point(796, 34);
+            this.cmbxistatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbxistatus.Name = "cmbxistatus";
-            this.cmbxistatus.Size = new System.Drawing.Size(121, 21);
+            this.cmbxistatus.Size = new System.Drawing.Size(160, 24);
             this.cmbxistatus.TabIndex = 32;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(551, 31);
+            this.label4.Location = new System.Drawing.Point(735, 38);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 39;
             this.label4.Text = "Status:";
             // 
             // btncancelar
             // 
-            this.btncancelar.Location = new System.Drawing.Point(643, 152);
+            this.btncancelar.Location = new System.Drawing.Point(857, 187);
+            this.btncancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(109, 27);
+            this.btncancelar.Size = new System.Drawing.Size(145, 33);
             this.btncancelar.TabIndex = 34;
             this.btncancelar.Text = "CANCELAR";
             this.btncancelar.UseVisualStyleBackColor = true;
@@ -205,9 +210,10 @@ namespace WindowsFormsApp2.forms
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(497, 152);
+            this.btnguardar.Location = new System.Drawing.Point(663, 187);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(109, 27);
+            this.btnguardar.Size = new System.Drawing.Size(145, 33);
             this.btnguardar.TabIndex = 33;
             this.btnguardar.Text = "GUARDAR";
             this.btnguardar.UseVisualStyleBackColor = true;
@@ -241,7 +247,8 @@ namespace WindowsFormsApp2.forms
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvinsumos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvinsumos.Location = new System.Drawing.Point(12, 197);
+            this.dgvinsumos.Location = new System.Drawing.Point(16, 242);
+            this.dgvinsumos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvinsumos.Name = "dgvinsumos";
             this.dgvinsumos.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -252,7 +259,7 @@ namespace WindowsFormsApp2.forms
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvinsumos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvinsumos.Size = new System.Drawing.Size(776, 226);
+            this.dgvinsumos.Size = new System.Drawing.Size(1035, 278);
             this.dgvinsumos.TabIndex = 38;
             this.dgvinsumos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvinsumos_CellContentClick);
             // 
@@ -297,35 +304,39 @@ namespace WindowsFormsApp2.forms
             // txtid
             // 
             this.txtid.Enabled = false;
-            this.txtid.Location = new System.Drawing.Point(80, 28);
+            this.txtid.Location = new System.Drawing.Point(107, 34);
+            this.txtid.Margin = new System.Windows.Forms.Padding(4);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(100, 20);
+            this.txtid.Size = new System.Drawing.Size(132, 22);
             this.txtid.TabIndex = 28;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(308, 31);
+            this.label3.Location = new System.Drawing.Point(411, 38);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 37;
             this.label3.Text = "Costo:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 92);
+            this.label2.Location = new System.Drawing.Point(40, 113);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 36;
             this.label2.Text = "Nombre:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 31);
+            this.label1.Location = new System.Drawing.Point(77, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 13);
+            this.label1.Size = new System.Drawing.Size(23, 17);
             this.label1.TabIndex = 35;
             this.label1.Text = "Id:";
             // 
@@ -339,25 +350,31 @@ namespace WindowsFormsApp2.forms
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(80, 89);
+            this.txtnombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtnombre.Location = new System.Drawing.Point(107, 110);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(100, 20);
-            this.txtnombre.SoloLetras = true;
+            this.txtnombre.Size = new System.Drawing.Size(132, 22);
+            this.txtnombre.SoloLetras = false;
             this.txtnombre.SoloNumeros = false;
             this.txtnombre.TabIndex = 41;
             this.txtnombre.Validar = true;
             this.txtnombre.VRFC = false;
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
             // 
             // txtcosto
             // 
-            this.txtcosto.Location = new System.Drawing.Point(351, 29);
+            this.txtcosto.Location = new System.Drawing.Point(468, 36);
+            this.txtcosto.Margin = new System.Windows.Forms.Padding(4);
             this.txtcosto.Name = "txtcosto";
-            this.txtcosto.Size = new System.Drawing.Size(100, 20);
+            this.txtcosto.Size = new System.Drawing.Size(132, 22);
             this.txtcosto.SoloLetras = false;
-            this.txtcosto.SoloNumeros = true;
+            this.txtcosto.SoloNumeros = false;
             this.txtcosto.TabIndex = 42;
             this.txtcosto.Validar = true;
             this.txtcosto.VRFC = false;
+            this.txtcosto.TextChanged += new System.EventHandler(this.txtcosto_TextChanged);
+            this.txtcosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcosto_KeyPress);
             // 
             // errorValidacion
             // 
@@ -365,9 +382,9 @@ namespace WindowsFormsApp2.forms
             // 
             // frminsumos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.txtcosto);
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.cmbxunidad);
@@ -381,6 +398,7 @@ namespace WindowsFormsApp2.forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frminsumos";
             this.Text = "INSUMOS";
             this.Load += new System.EventHandler(this.frminsumos_Load);

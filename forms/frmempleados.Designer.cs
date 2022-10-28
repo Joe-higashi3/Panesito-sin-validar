@@ -119,7 +119,7 @@
             this.cmbrol.FormattingEnabled = true;
             this.cmbrol.Location = new System.Drawing.Point(705, 169);
             this.cmbrol.Name = "cmbrol";
-            this.cmbrol.Size = new System.Drawing.Size(237, 28);
+            this.cmbrol.Size = new System.Drawing.Size(237, 33);
             this.cmbrol.TabIndex = 77;
             this.cmbrol.ValueMember = "r_id";
             // 
@@ -148,7 +148,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(649, 170);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 20);
+            this.label13.Size = new System.Drawing.Size(50, 25);
             this.label13.TabIndex = 94;
             this.label13.Text = "Rol:";
             // 
@@ -157,7 +157,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(21, 94);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(107, 20);
+            this.label12.Size = new System.Drawing.Size(131, 25);
             this.label12.TabIndex = 93;
             this.label12.Text = "Contraseña:";
             // 
@@ -173,7 +173,7 @@
             "Cancelado"});
             this.cmbstatus.Location = new System.Drawing.Point(918, 115);
             this.cmbstatus.Name = "cmbstatus";
-            this.cmbstatus.Size = new System.Drawing.Size(121, 28);
+            this.cmbstatus.Size = new System.Drawing.Size(121, 33);
             this.cmbstatus.TabIndex = 76;
             // 
             // cmbmunicipio
@@ -184,7 +184,7 @@
             this.cmbmunicipio.FormattingEnabled = true;
             this.cmbmunicipio.Location = new System.Drawing.Point(675, 115);
             this.cmbmunicipio.Name = "cmbmunicipio";
-            this.cmbmunicipio.Size = new System.Drawing.Size(137, 28);
+            this.cmbmunicipio.Size = new System.Drawing.Size(137, 33);
             this.cmbmunicipio.TabIndex = 75;
             this.cmbmunicipio.ValueMember = "mu_id_municipio";
             // 
@@ -213,7 +213,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(558, 118);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 20);
+            this.label11.Size = new System.Drawing.Size(111, 25);
             this.label11.TabIndex = 92;
             this.label11.Text = "Municipio:";
             // 
@@ -222,7 +222,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(831, 118);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 20);
+            this.label10.Size = new System.Drawing.Size(81, 25);
             this.label10.TabIndex = 91;
             this.label10.Text = "Status:";
             // 
@@ -231,7 +231,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(58, 206);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 20);
+            this.label9.Size = new System.Drawing.Size(93, 25);
             this.label9.TabIndex = 90;
             this.label9.Text = "Colonia:";
             // 
@@ -240,7 +240,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(766, 37);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 20);
+            this.label8.Size = new System.Drawing.Size(120, 25);
             this.label8.TabIndex = 89;
             this.label8.Text = "N. Exterior:";
             // 
@@ -249,7 +249,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(539, 37);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 20);
+            this.label7.Size = new System.Drawing.Size(113, 25);
             this.label7.TabIndex = 88;
             this.label7.Text = "N. Interior:";
             // 
@@ -258,7 +258,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(35, 134);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 20);
+            this.label6.Size = new System.Drawing.Size(117, 25);
             this.label6.TabIndex = 87;
             this.label6.Text = "Apellido P:";
             // 
@@ -267,7 +267,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(31, 172);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 20);
+            this.label5.Size = new System.Drawing.Size(121, 25);
             this.label5.TabIndex = 86;
             this.label5.Text = "Apellido M:";
             // 
@@ -296,7 +296,7 @@
             this.txtid.Enabled = false;
             this.txtid.Location = new System.Drawing.Point(158, 21);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(67, 26);
+            this.txtid.Size = new System.Drawing.Size(67, 30);
             this.txtid.TabIndex = 83;
             // 
             // label4
@@ -304,7 +304,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(583, 70);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 20);
+            this.label4.Size = new System.Drawing.Size(69, 25);
             this.label4.TabIndex = 82;
             this.label4.Text = "Calle:";
             // 
@@ -313,7 +313,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(231, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 20);
+            this.label3.Size = new System.Drawing.Size(104, 25);
             this.label3.TabIndex = 81;
             this.label3.Text = "Telefono:";
             // 
@@ -322,7 +322,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(58, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 20);
+            this.label2.Size = new System.Drawing.Size(93, 25);
             this.label2.TabIndex = 80;
             this.label2.Text = "Usuario:";
             // 
@@ -331,7 +331,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(112, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 20);
+            this.label1.Size = new System.Drawing.Size(40, 25);
             this.label1.TabIndex = 79;
             this.label1.Text = "ID:";
             // 
@@ -518,101 +518,116 @@
             // 
             this.txttelefono.Location = new System.Drawing.Point(321, 18);
             this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(174, 26);
+            this.txttelefono.Size = new System.Drawing.Size(174, 30);
             this.txttelefono.SoloLetras = false;
             this.txttelefono.SoloNumeros = true;
             this.txttelefono.TabIndex = 96;
             this.txttelefono.Validar = true;
             this.txttelefono.VRFC = false;
+            this.txttelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttelefono_KeyPress);
             // 
             // txtusuario
             // 
+            this.txtusuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtusuario.Location = new System.Drawing.Point(158, 57);
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(337, 26);
+            this.txtusuario.Size = new System.Drawing.Size(337, 30);
             this.txtusuario.SoloLetras = false;
             this.txtusuario.SoloNumeros = false;
             this.txtusuario.TabIndex = 97;
             this.txtusuario.Validar = false;
             this.txtusuario.VRFC = false;
+            this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // txtcontraseña
             // 
+            this.txtcontraseña.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtcontraseña.Location = new System.Drawing.Point(158, 91);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.PasswordChar = '*';
-            this.txtcontraseña.Size = new System.Drawing.Size(337, 26);
+            this.txtcontraseña.Size = new System.Drawing.Size(337, 30);
             this.txtcontraseña.SoloLetras = true;
             this.txtcontraseña.SoloNumeros = false;
             this.txtcontraseña.TabIndex = 98;
             this.txtcontraseña.Validar = true;
             this.txtcontraseña.VRFC = false;
+            this.txtcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontraseña_KeyPress);
             // 
             // txtapaterno
             // 
+            this.txtapaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtapaterno.Location = new System.Drawing.Point(158, 131);
             this.txtapaterno.Name = "txtapaterno";
-            this.txtapaterno.Size = new System.Drawing.Size(337, 26);
+            this.txtapaterno.Size = new System.Drawing.Size(337, 30);
             this.txtapaterno.SoloLetras = true;
             this.txtapaterno.SoloNumeros = false;
             this.txtapaterno.TabIndex = 99;
             this.txtapaterno.Validar = true;
             this.txtapaterno.VRFC = false;
+            this.txtapaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapaterno_KeyPress);
             // 
             // txtamaterno
             // 
+            this.txtamaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtamaterno.Location = new System.Drawing.Point(158, 169);
             this.txtamaterno.Name = "txtamaterno";
-            this.txtamaterno.Size = new System.Drawing.Size(337, 26);
+            this.txtamaterno.Size = new System.Drawing.Size(337, 30);
             this.txtamaterno.SoloLetras = true;
             this.txtamaterno.SoloNumeros = false;
             this.txtamaterno.TabIndex = 100;
             this.txtamaterno.Validar = false;
             this.txtamaterno.VRFC = false;
+            this.txtamaterno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtamaterno_KeyPress);
             // 
             // txtcolonia
             // 
+            this.txtcolonia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtcolonia.Location = new System.Drawing.Point(158, 206);
             this.txtcolonia.Name = "txtcolonia";
-            this.txtcolonia.Size = new System.Drawing.Size(337, 26);
+            this.txtcolonia.Size = new System.Drawing.Size(337, 30);
             this.txtcolonia.SoloLetras = true;
             this.txtcolonia.SoloNumeros = false;
             this.txtcolonia.TabIndex = 101;
             this.txtcolonia.Validar = true;
             this.txtcolonia.VRFC = false;
+            this.txtcolonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcolonia_KeyPress);
             // 
             // txtinterior
             // 
             this.txtinterior.Location = new System.Drawing.Point(658, 34);
             this.txtinterior.Name = "txtinterior";
-            this.txtinterior.Size = new System.Drawing.Size(100, 26);
+            this.txtinterior.Size = new System.Drawing.Size(100, 30);
             this.txtinterior.SoloLetras = false;
             this.txtinterior.SoloNumeros = true;
             this.txtinterior.TabIndex = 102;
             this.txtinterior.Validar = true;
             this.txtinterior.VRFC = false;
+            this.txtinterior.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtinterior_KeyPress);
             // 
             // txtexterior
             // 
             this.txtexterior.Location = new System.Drawing.Point(870, 34);
             this.txtexterior.Name = "txtexterior";
-            this.txtexterior.Size = new System.Drawing.Size(100, 26);
+            this.txtexterior.Size = new System.Drawing.Size(100, 30);
             this.txtexterior.SoloLetras = false;
             this.txtexterior.SoloNumeros = true;
             this.txtexterior.TabIndex = 103;
             this.txtexterior.Validar = true;
             this.txtexterior.VRFC = false;
+            this.txtexterior.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtexterior_KeyPress);
             // 
             // txtcalle
             // 
+            this.txtcalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtcalle.Location = new System.Drawing.Point(658, 70);
             this.txtcalle.Name = "txtcalle";
-            this.txtcalle.Size = new System.Drawing.Size(312, 26);
+            this.txtcalle.Size = new System.Drawing.Size(312, 30);
             this.txtcalle.SoloLetras = true;
             this.txtcalle.SoloNumeros = false;
             this.txtcalle.TabIndex = 104;
             this.txtcalle.Validar = true;
             this.txtcalle.VRFC = false;
+            this.txtcalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcalle_KeyPress);
             // 
             // errorValidacion
             // 
@@ -620,7 +635,7 @@
             // 
             // frmempleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 633);
             this.Controls.Add(this.txtcalle);
