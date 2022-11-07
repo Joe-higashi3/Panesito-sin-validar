@@ -94,5 +94,11 @@ namespace WindowsFormsApp2.forms
             frmrol mostrar = new frmrol();
             mostrar.Show();
         }
+
+        private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmventas ven = new frmventas();
+            ven.Show();
+        }
     }
 }

@@ -73,6 +73,11 @@
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
     <Compile Include="clases\clsvalidar.cs" />
+    <Compile Include="dsCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsInsumosp.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,10 +114,10 @@
     <Compile Include="forms\frmalmacen.Designer.cs">
       <DependentUpon>frmalmacen.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\frmbuscarproducto1.cs">
+    <Compile Include="busquedas\frmbuscarproducto1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\frmbuscarproducto1.Designer.cs">
+    <Compile Include="busquedas\frmbuscarproducto1.Designer.cs">
       <DependentUpon>frmbuscarproducto1.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\frmcategoria.cs">
@@ -358,7 +363,7 @@
     <EmbeddedResource Include="forms\frmalmacen.resx">
       <DependentUpon>frmalmacen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\frmbuscarproducto1.resx">
+    <EmbeddedResource Include="busquedas\frmbuscarproducto1.resx">
       <DependentUpon>frmbuscarproducto1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmcategoria.resx">
@@ -415,6 +420,17 @@
     <EmbeddedResource Include="reportes\frmrepoventas.resx">
       <DependentUpon>frmrepoventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsCliente.xsc">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </None>
+    <None Include="dsCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCliente.xss">
+      <DependentUpon>dsCliente.xsd</DependentUpon>
+    </None>
     <None Include="dsInsumosp.xsc">
       <DependentUpon>dsInsumosp.xsd</DependentUpon>
     </None>

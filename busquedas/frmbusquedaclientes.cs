@@ -16,5 +16,24 @@ namespace WindowsFormsApp2.busquedas
         {
             InitializeComponent();
         }
+
+        private void frmbusquedaclientes_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'dsCliente.CLIENTE' Puede moverla o quitarla según sea necesario.
+            this.cLIENTETableAdapter.Fill(this.dsCliente.CLIENTE,TXTNOMBRE.Text);
+
+        }
+
+        private void TXTNOMBRE_TextChanged(object sender, EventArgs e)
+        {
+            this.cLIENTETableAdapter.Fill(this.dsCliente.CLIENTE, TXTNOMBRE.Text);
+
+        }
+
+        private void TXTTELEFONO_TextChanged(object sender, EventArgs e)
+        {
+            this.cLIENTETableAdapter.FillBy(this.dsCliente.CLIENTE, TXTTELEFONO.Text);
+
+        }
     }
 }
