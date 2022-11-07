@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmtipomov));
             this.btncancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvtm = new System.Windows.Forms.DataGridView();
@@ -164,7 +163,6 @@
             // errorValidacion
             // 
             this.errorValidacion.ContainerControl = this;
-            this.errorValidacion.Icon = ((System.Drawing.Icon)(resources.GetObject("errorValidacion.Icon")));
             // 
             // frmtipomov
             // 

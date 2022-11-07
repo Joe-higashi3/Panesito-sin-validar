@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmunidad));
             this.btncancelar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtidunidad = new System.Windows.Forms.TextBox();
@@ -163,7 +162,6 @@
             // errorValidacion
             // 
             this.errorValidacion.ContainerControl = this;
-            this.errorValidacion.Icon = ((System.Drawing.Icon)(resources.GetObject("errorValidacion.Icon")));
             // 
             // frmunidad
             // 

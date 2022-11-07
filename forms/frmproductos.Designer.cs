@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmproductos));
             this.label7 = new System.Windows.Forms.Label();
             this.cbxunidad = new System.Windows.Forms.ComboBox();
             this.uNIDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -342,8 +341,8 @@
             this.txtnombre.Location = new System.Drawing.Point(150, 50);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(302, 30);
-            this.txtnombre.SoloLetras = false;
-            this.txtnombre.SoloNumeros = true;
+            this.txtnombre.SoloLetras = true;
+            this.txtnombre.SoloNumeros = false;
             this.txtnombre.TabIndex = 72;
             this.txtnombre.Validar = true;
             this.txtnombre.VRFC = false;
@@ -365,7 +364,6 @@
             // errorValidacion
             // 
             this.errorValidacion.ContainerControl = this;
-            this.errorValidacion.Icon = ((System.Drawing.Icon)(resources.GetObject("errorValidacion.Icon")));
             // 
             // frmproductos
             // 

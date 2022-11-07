@@ -109,7 +109,7 @@
             this.cbxstatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxstatus.Name = "cbxstatus";
             this.cbxstatus.Size = new System.Drawing.Size(220, 50);
-            this.cbxstatus.TabIndex = 66;
+            this.cbxstatus.TabIndex = 26;
             // 
             // cbxMunicipio
             // 
@@ -122,7 +122,7 @@
             this.cbxMunicipio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxMunicipio.Name = "cbxMunicipio";
             this.cbxMunicipio.Size = new System.Drawing.Size(241, 50);
-            this.cbxMunicipio.TabIndex = 65;
+            this.cbxMunicipio.TabIndex = 24;
             this.cbxMunicipio.ValueMember = "mu_id_municipio";
             // 
             // mUNICIPIOBindingSource
@@ -169,7 +169,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1295, 78);
+            this.label8.Location = new System.Drawing.Point(784, 74);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(249, 51);
             this.label8.TabIndex = 61;
@@ -179,7 +179,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(784, 71);
+            this.label7.Location = new System.Drawing.Point(1214, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(234, 51);
             this.label7.TabIndex = 60;
@@ -212,7 +212,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(239, 62);
-            this.btnCancelar.TabIndex = 57;
+            this.btnCancelar.TabIndex = 30;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -224,7 +224,7 @@
             this.btnguardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(231, 62);
-            this.btnguardar.TabIndex = 56;
+            this.btnguardar.TabIndex = 28;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
@@ -310,7 +310,7 @@
             this.cbxregimen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxregimen.Name = "cbxregimen";
             this.cbxregimen.Size = new System.Drawing.Size(1620, 44);
-            this.cbxregimen.TabIndex = 71;
+            this.cbxregimen.TabIndex = 14;
             this.cbxregimen.ValueMember = "rg_id";
             // 
             // rEGIMENBindingSource
@@ -365,7 +365,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1619, 330);
-            this.dataGridView1.TabIndex = 74;
+            this.dataGridView1.TabIndex = 32;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pdridDataGridViewTextBoxColumn
@@ -525,7 +525,7 @@
             this.txttelefono.Size = new System.Drawing.Size(308, 56);
             this.txttelefono.SoloLetras = false;
             this.txttelefono.SoloNumeros = false;
-            this.txttelefono.TabIndex = 75;
+            this.txttelefono.TabIndex = 2;
             this.txttelefono.Validar = true;
             this.txttelefono.VRFC = false;
             this.txttelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttelefono_KeyPress);
@@ -540,7 +540,7 @@
             this.txtnombre.Size = new System.Drawing.Size(427, 56);
             this.txtnombre.SoloLetras = true;
             this.txtnombre.SoloNumeros = false;
-            this.txtnombre.TabIndex = 76;
+            this.txtnombre.TabIndex = 4;
             this.txtnombre.Validar = false;
             this.txtnombre.VRFC = false;
             this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
@@ -555,7 +555,7 @@
             this.txtapellidop.Size = new System.Drawing.Size(425, 56);
             this.txtapellidop.SoloLetras = true;
             this.txtapellidop.SoloNumeros = false;
-            this.txtapellidop.TabIndex = 77;
+            this.txtapellidop.TabIndex = 6;
             this.txtapellidop.Validar = false;
             this.txtapellidop.VRFC = false;
             this.txtapellidop.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellidop_KeyPress);
@@ -570,7 +570,7 @@
             this.txtapellidom.Size = new System.Drawing.Size(427, 56);
             this.txtapellidom.SoloLetras = false;
             this.txtapellidom.SoloNumeros = false;
-            this.txtapellidom.TabIndex = 78;
+            this.txtapellidom.TabIndex = 8;
             this.txtapellidom.Validar = false;
             this.txtapellidom.VRFC = false;
             this.txtapellidom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellidom_KeyPress);
@@ -585,7 +585,7 @@
             this.txtrazon_social.Size = new System.Drawing.Size(400, 56);
             this.txtrazon_social.SoloLetras = false;
             this.txtrazon_social.SoloNumeros = false;
-            this.txtrazon_social.TabIndex = 79;
+            this.txtrazon_social.TabIndex = 12;
             this.txtrazon_social.Validar = true;
             this.txtrazon_social.VRFC = false;
             this.txtrazon_social.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrazon_social_KeyPress);
@@ -600,7 +600,7 @@
             this.txtcolonia.Size = new System.Drawing.Size(608, 56);
             this.txtcolonia.SoloLetras = false;
             this.txtcolonia.SoloNumeros = false;
-            this.txtcolonia.TabIndex = 80;
+            this.txtcolonia.TabIndex = 16;
             this.txtcolonia.Validar = true;
             this.txtcolonia.VRFC = false;
             this.txtcolonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcolonia_KeyPress);
@@ -608,29 +608,30 @@
             // txtnumint
             // 
             this.txtnumint.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F);
-            this.txtnumint.Location = new System.Drawing.Point(1045, 69);
+            this.txtnumint.Location = new System.Drawing.Point(1468, 69);
             this.txtnumint.Margin = new System.Windows.Forms.Padding(4);
             this.txtnumint.Name = "txtnumint";
             this.txtnumint.Size = new System.Drawing.Size(192, 56);
             this.txtnumint.SoloLetras = false;
             this.txtnumint.SoloNumeros = true;
-            this.txtnumint.TabIndex = 81;
-            this.txtnumint.Validar = true;
+            this.txtnumint.TabIndex = 20;
+            this.txtnumint.Validar = false;
             this.txtnumint.VRFC = false;
             this.txtnumint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnumint_KeyPress);
             // 
             // txtnumext
             // 
             this.txtnumext.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F);
-            this.txtnumext.Location = new System.Drawing.Point(1573, 70);
+            this.txtnumext.Location = new System.Drawing.Point(1055, 65);
             this.txtnumext.Margin = new System.Windows.Forms.Padding(4);
             this.txtnumext.Name = "txtnumext";
             this.txtnumext.Size = new System.Drawing.Size(132, 56);
             this.txtnumext.SoloLetras = false;
             this.txtnumext.SoloNumeros = false;
-            this.txtnumext.TabIndex = 82;
+            this.txtnumext.TabIndex = 18;
             this.txtnumext.Validar = true;
             this.txtnumext.VRFC = false;
+            this.txtnumext.TextChanged += new System.EventHandler(this.txtnumext_TextChanged);
             this.txtnumext.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnumext_KeyPress);
             // 
             // txtcalle
@@ -643,7 +644,7 @@
             this.txtcalle.Size = new System.Drawing.Size(623, 56);
             this.txtcalle.SoloLetras = true;
             this.txtcalle.SoloNumeros = false;
-            this.txtcalle.TabIndex = 83;
+            this.txtcalle.TabIndex = 22;
             this.txtcalle.Validar = true;
             this.txtcalle.VRFC = false;
             this.txtcalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcalle_KeyPress);
@@ -662,7 +663,7 @@
             this.txtRFC.Size = new System.Drawing.Size(426, 56);
             this.txtRFC.SoloLetras = false;
             this.txtRFC.SoloNumeros = false;
-            this.txtRFC.TabIndex = 84;
+            this.txtRFC.TabIndex = 10;
             this.txtRFC.Validar = false;
             this.txtRFC.VRFC = false;
             // 

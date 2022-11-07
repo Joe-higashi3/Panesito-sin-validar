@@ -238,7 +238,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(766, 37);
+            this.label8.Location = new System.Drawing.Point(532, 21);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 25);
             this.label8.TabIndex = 89;
@@ -247,7 +247,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(539, 37);
+            this.label7.Location = new System.Drawing.Point(754, 26);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 25);
             this.label7.TabIndex = 88;
@@ -594,19 +594,19 @@
             // 
             // txtinterior
             // 
-            this.txtinterior.Location = new System.Drawing.Point(658, 34);
+            this.txtinterior.Location = new System.Drawing.Point(873, 23);
             this.txtinterior.Name = "txtinterior";
             this.txtinterior.Size = new System.Drawing.Size(100, 30);
             this.txtinterior.SoloLetras = false;
             this.txtinterior.SoloNumeros = true;
             this.txtinterior.TabIndex = 102;
-            this.txtinterior.Validar = true;
+            this.txtinterior.Validar = false;
             this.txtinterior.VRFC = false;
             this.txtinterior.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtinterior_KeyPress);
             // 
             // txtexterior
             // 
-            this.txtexterior.Location = new System.Drawing.Point(870, 34);
+            this.txtexterior.Location = new System.Drawing.Point(649, 21);
             this.txtexterior.Name = "txtexterior";
             this.txtexterior.Size = new System.Drawing.Size(100, 30);
             this.txtexterior.SoloLetras = false;
@@ -614,6 +614,7 @@
             this.txtexterior.TabIndex = 103;
             this.txtexterior.Validar = true;
             this.txtexterior.VRFC = false;
+            this.txtexterior.TextChanged += new System.EventHandler(this.txtexterior_TextChanged);
             this.txtexterior.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtexterior_KeyPress);
             // 
             // txtcalle

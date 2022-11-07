@@ -85,7 +85,6 @@ namespace WindowsFormsApp2.forms
             if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == true)
             {
                 MessageBox.Show("Ha ocurrido un error");
-                limpiar();
             }
 
             else

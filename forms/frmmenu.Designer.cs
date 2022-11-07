@@ -36,6 +36,7 @@
             this.almacenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.provedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeMovimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insumoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,6 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dePedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,15 +64,15 @@
             // 
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
+            this.rolToolStripMenuItem,
             this.empleadosToolStripMenuItem,
+            this.categoriaToolStripMenuItem,
+            this.unidadToolStripMenuItem,
             this.productosToolStripMenuItem,
             this.almacenToolStripMenuItem,
-            this.categoriaToolStripMenuItem,
-            this.provedorToolStripMenuItem,
-            this.rolToolStripMenuItem,
+            this.insumoToolStripMenuItem,
             this.tipoDeMovimientoToolStripMenuItem,
-            this.unidadToolStripMenuItem,
-            this.insumoToolStripMenuItem});
+            this.provedorToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.registrosToolStripMenuItem.Text = "Registros";
@@ -118,6 +118,13 @@
             this.provedorToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.provedorToolStripMenuItem.Text = "Provedor";
             this.provedorToolStripMenuItem.Click += new System.EventHandler(this.provedorToolStripMenuItem_Click);
+            // 
+            // rolToolStripMenuItem
+            // 
+            this.rolToolStripMenuItem.Name = "rolToolStripMenuItem";
+            this.rolToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.rolToolStripMenuItem.Text = "Rol ";
+            this.rolToolStripMenuItem.Click += new System.EventHandler(this.rolToolStripMenuItem_Click_1);
             // 
             // tipoDeMovimientoToolStripMenuItem
             // 
@@ -166,13 +173,6 @@
             this.dePedidosToolStripMenuItem.Name = "dePedidosToolStripMenuItem";
             this.dePedidosToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.dePedidosToolStripMenuItem.Text = "de Pedidos";
-            // 
-            // rolToolStripMenuItem
-            // 
-            this.rolToolStripMenuItem.Name = "rolToolStripMenuItem";
-            this.rolToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
-            this.rolToolStripMenuItem.Text = "Rol ";
-            this.rolToolStripMenuItem.Click += new System.EventHandler(this.rolToolStripMenuItem_Click_1);
             // 
             // frmmenu
             // 

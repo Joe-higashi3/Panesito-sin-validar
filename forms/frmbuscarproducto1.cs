@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2.forms
 {
-    public partial class frmventas : Form
+    public partial class frmbuscarproducto1 : Form
     {
-        public frmventas()
+        public frmbuscarproducto1()
         {
             InitializeComponent();
         }
-
-        
     }
 }

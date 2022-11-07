@@ -66,6 +66,7 @@ namespace WindowsFormsApp2.forms
             txtnombre.Clear();
             consecutivo();
             this.aLMACEN_PRODUCTOTableAdapter.Fill(this.panesitoAlmacen.ALMACEN_PRODUCTO);
+            errorValidacion.Clear();
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
@@ -74,7 +75,6 @@ namespace WindowsFormsApp2.forms
             if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == true)
             {
                 MessageBox.Show("Ha ocurrido un error");
-                limpiar();
             }
             else
             {

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmalmacen));
             this.btnagregar = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -169,7 +168,6 @@
             // errorValidacion
             // 
             this.errorValidacion.ContainerControl = this;
-            this.errorValidacion.Icon = ((System.Drawing.Icon)(resources.GetObject("errorValidacion.Icon")));
             // 
             // frmalmacen
             // 

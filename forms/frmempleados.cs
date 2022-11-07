@@ -113,7 +113,6 @@ namespace WindowsFormsApp2.forms
             if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == true)
             {
                 MessageBox.Show("Ha ocurrido un error");
-                limpiar();
             }
 
             else
@@ -219,8 +218,7 @@ namespace WindowsFormsApp2.forms
 
         private void txtinterior_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidarNumeros(sender, e);
-            txtinterior.Focus();
+
         }
 
         private void txtexterior_KeyPress(object sender, KeyPressEventArgs e)
@@ -233,6 +231,11 @@ namespace WindowsFormsApp2.forms
         {
             ValidarLetras(sender, e);
             txtcalle.Focus();
+        }
+
+        private void txtexterior_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

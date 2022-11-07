@@ -50,7 +50,6 @@ namespace WindowsFormsApp2.forms
             if (producto.GuardarProducto() == true)
             {
                 MessageBox.Show("Sus Datos se guardaron correctamente");
-                limpiar();
             }
             else
             {
@@ -67,6 +66,7 @@ namespace WindowsFormsApp2.forms
             txtdescripcion.Clear();
             consecutivo();
             this.pRODUCTOTableAdapter.Fill(this.panesitoProducto.PRODUCTO);
+            txtprecio.Focus();
         }
 
         private void consecutivo()
@@ -85,6 +85,7 @@ namespace WindowsFormsApp2.forms
             {
                 txtid.Text = Convert.ToString(l.GetInt32(0));
             }
+
         }
 
         private void dvgproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -120,15 +121,15 @@ namespace WindowsFormsApp2.forms
             if (clsvalidar.ValidarCamposVacios(this, errorValidacion) == true)
             {
                 MessageBox.Show("Ha ocurrido un error");
-                limpiar();
             }
 
             else
             {
                 GuardarProducto();
+                limpiar();
             }
 
-
+            
         }
 
         private void btncancelar_Click(object sender, EventArgs e)

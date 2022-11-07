@@ -169,7 +169,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(498, 22);
+            this.label7.Location = new System.Drawing.Point(746, 20);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 25);
             this.label7.TabIndex = 30;
@@ -178,7 +178,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(725, 22);
+            this.label8.Location = new System.Drawing.Point(500, 21);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 25);
             this.label8.TabIndex = 32;
@@ -473,20 +473,20 @@
             // 
             // txtnumint
             // 
-            this.txtnumint.Location = new System.Drawing.Point(617, 21);
+            this.txtnumint.Location = new System.Drawing.Point(865, 19);
             this.txtnumint.Name = "txtnumint";
             this.txtnumint.Size = new System.Drawing.Size(100, 30);
             this.txtnumint.SoloLetras = false;
             this.txtnumint.SoloNumeros = true;
             this.txtnumint.TabIndex = 48;
-            this.txtnumint.Validar = true;
+            this.txtnumint.Validar = false;
             this.txtnumint.VRFC = false;
             this.txtnumint.TextChanged += new System.EventHandler(this.txtnumint_TextChanged);
             this.txtnumint.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnumint_KeyPress);
             // 
             // txtnumext
             // 
-            this.txtnumext.Location = new System.Drawing.Point(840, 21);
+            this.txtnumext.Location = new System.Drawing.Point(615, 20);
             this.txtnumext.Name = "txtnumext";
             this.txtnumext.Size = new System.Drawing.Size(125, 30);
             this.txtnumext.SoloLetras = false;

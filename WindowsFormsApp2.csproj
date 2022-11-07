@@ -109,6 +109,12 @@
     <Compile Include="forms\frmalmacen.Designer.cs">
       <DependentUpon>frmalmacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\frmbuscarproducto1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmbuscarproducto1.Designer.cs">
+      <DependentUpon>frmbuscarproducto1.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\frmcategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmalmacen.resx">
       <DependentUpon>frmalmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmbuscarproducto1.resx">
+      <DependentUpon>frmbuscarproducto1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmcategoria.resx">
       <DependentUpon>frmcategoria.cs</DependentUpon>
