@@ -287,6 +287,12 @@ namespace WindowsFormsApp2 {
             
             private global::System.Data.DataColumn columnpe_estatus_pedido;
             
+            private global::System.Data.DataColumn columncl_nombre;
+            
+            private global::System.Data.DataColumn columncl_apellido_pat;
+            
+            private global::System.Data.DataColumn columncl_telefono;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PEDIDODataTable() {
@@ -354,6 +360,30 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cl_nombreColumn {
+                get {
+                    return this.columncl_nombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cl_apellido_patColumn {
+                get {
+                    return this.columncl_apellido_pat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cl_telefonoColumn {
+                get {
+                    return this.columncl_telefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -389,13 +419,16 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PEDIDORow AddPEDIDORow(int pe_id_cliente, int pe_id_empleado, bool pe_estatus_pedido) {
+            public PEDIDORow AddPEDIDORow(int pe_id_cliente, int pe_id_empleado, bool pe_estatus_pedido, string cl_nombre, string cl_apellido_pat, string cl_telefono) {
                 PEDIDORow rowPEDIDORow = ((PEDIDORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         pe_id_cliente,
                         pe_id_empleado,
-                        pe_estatus_pedido};
+                        pe_estatus_pedido,
+                        cl_nombre,
+                        cl_apellido_pat,
+                        cl_telefono};
                 rowPEDIDORow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPEDIDORow);
                 return rowPEDIDORow;
@@ -429,6 +462,9 @@ namespace WindowsFormsApp2 {
                 this.columnpe_id_cliente = base.Columns["pe_id_cliente"];
                 this.columnpe_id_empleado = base.Columns["pe_id_empleado"];
                 this.columnpe_estatus_pedido = base.Columns["pe_estatus_pedido"];
+                this.columncl_nombre = base.Columns["cl_nombre"];
+                this.columncl_apellido_pat = base.Columns["cl_apellido_pat"];
+                this.columncl_telefono = base.Columns["cl_telefono"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -442,6 +478,12 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnpe_id_empleado);
                 this.columnpe_estatus_pedido = new global::System.Data.DataColumn("pe_estatus_pedido", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpe_estatus_pedido);
+                this.columncl_nombre = new global::System.Data.DataColumn("cl_nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncl_nombre);
+                this.columncl_apellido_pat = new global::System.Data.DataColumn("cl_apellido_pat", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncl_apellido_pat);
+                this.columncl_telefono = new global::System.Data.DataColumn("cl_telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncl_telefono);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpe_id_pedido}, true));
                 this.columnpe_id_pedido.AutoIncrement = true;
@@ -453,6 +495,12 @@ namespace WindowsFormsApp2 {
                 this.columnpe_id_cliente.AllowDBNull = false;
                 this.columnpe_id_empleado.AllowDBNull = false;
                 this.columnpe_estatus_pedido.AllowDBNull = false;
+                this.columncl_nombre.AllowDBNull = false;
+                this.columncl_nombre.MaxLength = 50;
+                this.columncl_apellido_pat.AllowDBNull = false;
+                this.columncl_apellido_pat.MaxLength = 100;
+                this.columncl_telefono.AllowDBNull = false;
+                this.columncl_telefono.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -636,6 +684,39 @@ namespace WindowsFormsApp2 {
                     this[this.tablePEDIDO.pe_estatus_pedidoColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cl_nombre {
+                get {
+                    return ((string)(this[this.tablePEDIDO.cl_nombreColumn]));
+                }
+                set {
+                    this[this.tablePEDIDO.cl_nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cl_apellido_pat {
+                get {
+                    return ((string)(this[this.tablePEDIDO.cl_apellido_patColumn]));
+                }
+                set {
+                    this[this.tablePEDIDO.cl_apellido_patColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cl_telefono {
+                get {
+                    return ((string)(this[this.tablePEDIDO.cl_telefonoColumn]));
+                }
+                set {
+                    this[this.tablePEDIDO.cl_telefonoColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -801,6 +882,9 @@ namespace WindowsFormsApp2.PedidosTableAdapters {
             tableMapping.ColumnMappings.Add("pe_id_cliente", "pe_id_cliente");
             tableMapping.ColumnMappings.Add("pe_id_empleado", "pe_id_empleado");
             tableMapping.ColumnMappings.Add("pe_estatus_pedido", "pe_estatus_pedido");
+            tableMapping.ColumnMappings.Add("cl_nombre", "cl_nombre");
+            tableMapping.ColumnMappings.Add("cl_apellido_pat", "cl_apellido_pat");
+            tableMapping.ColumnMappings.Add("cl_telefono", "cl_telefono");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -845,20 +929,45 @@ SELECT pe_id_pedido, pe_id_cliente, pe_id_empleado, pe_estatus_pedido FROM PEDID
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT pe_id_pedido, pe_id_cliente, pe_id_empleado, pe_estatus_pedido FROM dbo.PE" +
-                "DIDO";
+            this._commandCollection[0].CommandText = @"SELECT pe.pe_id_pedido, pe.pe_id_cliente, pe.pe_id_empleado, pe.pe_estatus_pedido, cl.cl_nombre, cl.cl_apellido_pat, cl.cl_telefono
+FROM     PEDIDO AS pe INNER JOIN
+                  CLIENTE AS cl ON cl.cl_id_cliente = pe.pe_id_cliente
+WHERE  (cl.cl_nombre LIKE '%' + @nombre + '%')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "cl_nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT pe.pe_id_pedido, pe.pe_id_cliente, pe.pe_id_empleado, pe.pe_estatus_pedido, cl.cl_nombre, cl.cl_apellido_pat, cl.cl_telefono
+FROM     PEDIDO AS pe INNER JOIN
+                  CLIENTE AS cl ON cl.cl_id_cliente = pe.pe_id_cliente
+WHERE  (cl.cl_apellido_pat LIKE '%' + @APELLIDO_P + '%')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@APELLIDO_P", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "cl_apellido_pat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT pe.pe_id_pedido, pe.pe_id_cliente, pe.pe_id_empleado, pe.pe_estatus_pedido, cl.cl_nombre, cl.cl_apellido_pat, cl.cl_telefono
+FROM     PEDIDO AS pe INNER JOIN
+                  CLIENTE AS cl ON cl.cl_id_cliente = pe.pe_id_cliente
+WHERE  (cl.cl_telefono LIKE '%' + @TELEFONO + '%')";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TELEFONO", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "cl_telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Pedidos.PEDIDODataTable dataTable) {
+        public virtual int Fill(Pedidos.PEDIDODataTable dataTable, string nombre) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((nombre == null)) {
+                throw new global::System.ArgumentNullException("nombre");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nombre));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -870,8 +979,86 @@ SELECT pe_id_pedido, pe_id_cliente, pe_id_empleado, pe_estatus_pedido FROM PEDID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Pedidos.PEDIDODataTable GetData() {
+        public virtual Pedidos.PEDIDODataTable GetData(string nombre) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((nombre == null)) {
+                throw new global::System.ArgumentNullException("nombre");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nombre));
+            }
+            Pedidos.PEDIDODataTable dataTable = new Pedidos.PEDIDODataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(Pedidos.PEDIDODataTable dataTable, string APELLIDO_P) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((APELLIDO_P == null)) {
+                throw new global::System.ArgumentNullException("APELLIDO_P");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(APELLIDO_P));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Pedidos.PEDIDODataTable GetDataBy(string APELLIDO_P) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((APELLIDO_P == null)) {
+                throw new global::System.ArgumentNullException("APELLIDO_P");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(APELLIDO_P));
+            }
+            Pedidos.PEDIDODataTable dataTable = new Pedidos.PEDIDODataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(Pedidos.PEDIDODataTable dataTable, string TELEFONO) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((TELEFONO == null)) {
+                throw new global::System.ArgumentNullException("TELEFONO");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TELEFONO));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Pedidos.PEDIDODataTable GetDataBy1(string TELEFONO) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((TELEFONO == null)) {
+                throw new global::System.ArgumentNullException("TELEFONO");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(TELEFONO));
+            }
             Pedidos.PEDIDODataTable dataTable = new Pedidos.PEDIDODataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
