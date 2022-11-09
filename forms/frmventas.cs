@@ -17,10 +17,21 @@ namespace WindowsFormsApp2.forms
             InitializeComponent();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnbuscarcliente_Click(object sender, EventArgs e)
         {
             frmbusquedaclientes bc = new frmbusquedaclientes();
             bc.Show();
+        }
+
+        private void btnbuscarproducto_Click(object sender, EventArgs e)
+        {
+            frmbuscarproducto1 bp = new frmbuscarproducto1();
+            bp.Show();
+        }
+
+        private void btnbuscarpedido_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

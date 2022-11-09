@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -37,7 +38,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pedidos = new WindowsFormsApp2.Pedidos();
+            this.pEDIDOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pEDIDOTableAdapter = new WindowsFormsApp2.PedidosTableAdapters.PEDIDOTableAdapter();
+            this.peidpedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peidclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peidempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peestatuspedidoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox4
@@ -58,9 +68,19 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.peidpedidoDataGridViewTextBoxColumn,
+            this.peidclienteDataGridViewTextBoxColumn,
+            this.peidempleadoDataGridViewTextBoxColumn,
+            this.peestatuspedidoDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.pEDIDOBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(2, 161);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(773, 302);
             this.dataGridView1.TabIndex = 87;
@@ -115,6 +135,48 @@
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // pedidos
+            // 
+            this.pedidos.DataSetName = "Pedidos";
+            this.pedidos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pEDIDOBindingSource
+            // 
+            this.pEDIDOBindingSource.DataMember = "PEDIDO";
+            this.pEDIDOBindingSource.DataSource = this.pedidos;
+            // 
+            // pEDIDOTableAdapter
+            // 
+            this.pEDIDOTableAdapter.ClearBeforeFill = true;
+            // 
+            // peidpedidoDataGridViewTextBoxColumn
+            // 
+            this.peidpedidoDataGridViewTextBoxColumn.DataPropertyName = "pe_id_pedido";
+            this.peidpedidoDataGridViewTextBoxColumn.HeaderText = "pe_id_pedido";
+            this.peidpedidoDataGridViewTextBoxColumn.Name = "peidpedidoDataGridViewTextBoxColumn";
+            this.peidpedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // peidclienteDataGridViewTextBoxColumn
+            // 
+            this.peidclienteDataGridViewTextBoxColumn.DataPropertyName = "pe_id_cliente";
+            this.peidclienteDataGridViewTextBoxColumn.HeaderText = "pe_id_cliente";
+            this.peidclienteDataGridViewTextBoxColumn.Name = "peidclienteDataGridViewTextBoxColumn";
+            this.peidclienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // peidempleadoDataGridViewTextBoxColumn
+            // 
+            this.peidempleadoDataGridViewTextBoxColumn.DataPropertyName = "pe_id_empleado";
+            this.peidempleadoDataGridViewTextBoxColumn.HeaderText = "pe_id_empleado";
+            this.peidempleadoDataGridViewTextBoxColumn.Name = "peidempleadoDataGridViewTextBoxColumn";
+            this.peidempleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // peestatuspedidoDataGridViewCheckBoxColumn
+            // 
+            this.peestatuspedidoDataGridViewCheckBoxColumn.DataPropertyName = "pe_estatus_pedido";
+            this.peestatuspedidoDataGridViewCheckBoxColumn.HeaderText = "pe_estatus_pedido";
+            this.peestatuspedidoDataGridViewCheckBoxColumn.Name = "peestatuspedidoDataGridViewCheckBoxColumn";
+            this.peestatuspedidoDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
             // frmbusquedapedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
@@ -133,7 +195,10 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmbusquedapedidos";
             this.Text = "frmbusquedapedidos";
+            this.Load += new System.EventHandler(this.frmbusquedapedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,5 +215,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private Pedidos pedidos;
+        private System.Windows.Forms.BindingSource pEDIDOBindingSource;
+        private PedidosTableAdapters.PEDIDOTableAdapter pEDIDOTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn peidpedidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn peidclienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn peidempleadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn peestatuspedidoDataGridViewCheckBoxColumn;
     }
 }

@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmventas));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxcliente = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnbuscarproducto = new System.Windows.Forms.Button();
+            this.btnquitarproducto = new System.Windows.Forms.Button();
+            this.btnagregar = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnbuscarpedido = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -48,13 +48,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btncancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,13 +78,13 @@
             this.label9.TabIndex = 59;
             this.label9.Text = "Cliente:";
             // 
-            // comboBox1
+            // cbxcliente
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(116, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(319, 33);
-            this.comboBox1.TabIndex = 60;
+            this.cbxcliente.FormattingEnabled = true;
+            this.cbxcliente.Location = new System.Drawing.Point(116, 48);
+            this.cbxcliente.Name = "cbxcliente";
+            this.cbxcliente.Size = new System.Drawing.Size(319, 33);
+            this.cbxcliente.TabIndex = 60;
             // 
             // label1
             // 
@@ -102,32 +102,33 @@
             this.textBox2.Size = new System.Drawing.Size(114, 30);
             this.textBox2.TabIndex = 61;
             // 
-            // button3
+            // btnbuscarproducto
             // 
-            this.button3.Location = new System.Drawing.Point(762, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 39);
-            this.button3.TabIndex = 65;
-            this.button3.Text = "Buscar producto";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnbuscarproducto.Location = new System.Drawing.Point(762, 188);
+            this.btnbuscarproducto.Name = "btnbuscarproducto";
+            this.btnbuscarproducto.Size = new System.Drawing.Size(190, 39);
+            this.btnbuscarproducto.TabIndex = 65;
+            this.btnbuscarproducto.Text = "Buscar producto";
+            this.btnbuscarproducto.UseVisualStyleBackColor = true;
+            this.btnbuscarproducto.Click += new System.EventHandler(this.btnbuscarproducto_Click);
             // 
-            // button2
+            // btnquitarproducto
             // 
-            this.button2.Location = new System.Drawing.Point(548, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 39);
-            this.button2.TabIndex = 64;
-            this.button2.Text = "Quitar producto";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnquitarproducto.Location = new System.Drawing.Point(548, 233);
+            this.btnquitarproducto.Name = "btnquitarproducto";
+            this.btnquitarproducto.Size = new System.Drawing.Size(192, 39);
+            this.btnquitarproducto.TabIndex = 64;
+            this.btnquitarproducto.Text = "Quitar producto";
+            this.btnquitarproducto.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnagregar
             // 
-            this.button1.Location = new System.Drawing.Point(551, 188);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 39);
-            this.button1.TabIndex = 63;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnagregar.Location = new System.Drawing.Point(551, 188);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(190, 39);
+            this.btnagregar.TabIndex = 63;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -146,14 +147,15 @@
             this.button4.Text = "Añadir a pedido";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnbuscarpedido
             // 
-            this.button5.Location = new System.Drawing.Point(762, 233);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(190, 39);
-            this.button5.TabIndex = 68;
-            this.button5.Text = "Buscar Pedido";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnbuscarpedido.Location = new System.Drawing.Point(762, 233);
+            this.btnbuscarpedido.Name = "btnbuscarpedido";
+            this.btnbuscarpedido.Size = new System.Drawing.Size(190, 39);
+            this.btnbuscarpedido.TabIndex = 68;
+            this.btnbuscarpedido.Text = "Buscar Pedido";
+            this.btnbuscarpedido.UseVisualStyleBackColor = true;
+            this.btnbuscarpedido.Click += new System.EventHandler(this.btnbuscarpedido_Click);
             // 
             // label2
             // 
@@ -224,15 +226,15 @@
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
             // 
-            // button7
+            // btnbuscar
             // 
-            this.button7.Location = new System.Drawing.Point(441, 44);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(88, 39);
-            this.button7.TabIndex = 77;
-            this.button7.Text = "Buscar";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnbuscar.Location = new System.Drawing.Point(441, 44);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(88, 39);
+            this.btnbuscar.TabIndex = 77;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscarcliente_Click);
             // 
             // label5
             // 
@@ -273,27 +275,27 @@
             this.textBox7.Size = new System.Drawing.Size(114, 30);
             this.textBox7.TabIndex = 82;
             // 
-            // button8
+            // btncancelar
             // 
-            this.button8.Location = new System.Drawing.Point(704, 10);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(108, 39);
-            this.button8.TabIndex = 83;
-            this.button8.Text = "Cancelar";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btncancelar.Location = new System.Drawing.Point(704, 10);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(108, 39);
+            this.btncancelar.TabIndex = 83;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = true;
             // 
             // frmventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 688);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox4);
@@ -302,15 +304,15 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnbuscarpedido);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnbuscarproducto);
+            this.Controls.Add(this.btnquitarproducto);
+            this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxcliente);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,15 +330,15 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxcliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnbuscarproducto;
+        private System.Windows.Forms.Button btnquitarproducto;
+        private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnbuscarpedido;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button6;
@@ -345,12 +347,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btncancelar;
     }
 }

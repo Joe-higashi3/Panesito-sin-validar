@@ -16,5 +16,22 @@ namespace WindowsFormsApp2.forms
         {
             InitializeComponent();
         }
+
+        private void frmbuscarproducto1_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'buscarproducto.PRODUCTO' Puede moverla o quitarla según sea necesario.
+            this.pRODUCTOTableAdapter.Fill(this.buscarproducto.PRODUCTO,TXTNOMBRE.Text);
+
+        }
+
+        private void txtid_TextChanged(object sender, EventArgs e)
+        {
+            //this.pRODUCTOTableAdapter.FillBy(this.buscarproducto.PRODUCTO, Convert.ToInt32(txtid.Text));
+        }
+
+        private void TXTNOMBRE_TextChanged(object sender, EventArgs e)
+        {
+            this.pRODUCTOTableAdapter.Fill(this.buscarproducto.PRODUCTO,TXTNOMBRE.Text);
+        }
     }
 }
