@@ -31,7 +31,8 @@ namespace WindowsFormsApp2.forms
 
         private void btnbuscarpedido_Click(object sender, EventArgs e)
         {
-
+            frmbusquedapedidos bpd = new frmbusquedapedidos();
+            bpd.Show();
         }
     }
 }

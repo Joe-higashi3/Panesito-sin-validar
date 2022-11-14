@@ -29,36 +29,35 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txttelefono = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pEDIDOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pedidos = new WindowsFormsApp2.Pedidos();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtapellido = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pEDIDOTableAdapter = new WindowsFormsApp2.PedidosTableAdapters.PEDIDOTableAdapter();
-            this.peidpedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_apellido_pat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peidclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peidempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peidpedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.peestatuspedidoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pEDIDOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pedidos = new WindowsFormsApp2.Pedidos();
+            this.pEDIDOTableAdapter = new WindowsFormsApp2.PedidosTableAdapters.PEDIDOTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidos)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox4
+            // txttelefono
             // 
-            this.textBox4.Location = new System.Drawing.Point(140, 114);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 30);
-            this.textBox4.TabIndex = 89;
+            this.txttelefono.Location = new System.Drawing.Point(140, 114);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(154, 30);
+            this.txttelefono.TabIndex = 89;
+            this.txttelefono.TextChanged += new System.EventHandler(this.txttelefono_TextChanged);
             // 
             // label3
             // 
@@ -80,8 +79,6 @@
             this.cl_nombre,
             this.cl_apellido_pat,
             this.cl_telefono,
-            this.peidclienteDataGridViewTextBoxColumn,
-            this.peidempleadoDataGridViewTextBoxColumn,
             this.peestatuspedidoDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.pEDIDOBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(2, 161);
@@ -90,16 +87,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(773, 302);
             this.dataGridView1.TabIndex = 87;
-            // 
-            // pEDIDOBindingSource
-            // 
-            this.pEDIDOBindingSource.DataMember = "PEDIDO";
-            this.pEDIDOBindingSource.DataSource = this.pedidos;
-            // 
-            // pedidos
-            // 
-            this.pedidos.DataSetName = "Pedidos";
-            this.pedidos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button7
             // 
@@ -110,12 +97,13 @@
             this.button7.Text = "Buscar";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txtapellido
             // 
-            this.textBox6.Location = new System.Drawing.Point(140, 77);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(337, 30);
-            this.textBox6.TabIndex = 85;
+            this.txtapellido.Location = new System.Drawing.Point(140, 77);
+            this.txtapellido.Name = "txtapellido";
+            this.txtapellido.Size = new System.Drawing.Size(337, 30);
+            this.txtapellido.TabIndex = 85;
+            this.txtapellido.TextChanged += new System.EventHandler(this.txtapellido_TextChanged);
             // 
             // label6
             // 
@@ -132,6 +120,7 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(337, 30);
             this.txtnombre.TabIndex = 83;
+            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
             // 
             // label2
             // 
@@ -151,58 +140,54 @@
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // pEDIDOTableAdapter
-            // 
-            this.pEDIDOTableAdapter.ClearBeforeFill = true;
-            // 
-            // peidpedidoDataGridViewTextBoxColumn
-            // 
-            this.peidpedidoDataGridViewTextBoxColumn.DataPropertyName = "pe_id_pedido";
-            this.peidpedidoDataGridViewTextBoxColumn.HeaderText = "pe_id_pedido";
-            this.peidpedidoDataGridViewTextBoxColumn.Name = "peidpedidoDataGridViewTextBoxColumn";
-            this.peidpedidoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // cl_nombre
             // 
             this.cl_nombre.DataPropertyName = "cl_nombre";
-            this.cl_nombre.HeaderText = "cl_nombre";
+            this.cl_nombre.HeaderText = "Nombre";
             this.cl_nombre.Name = "cl_nombre";
             this.cl_nombre.ReadOnly = true;
             // 
             // cl_apellido_pat
             // 
             this.cl_apellido_pat.DataPropertyName = "cl_apellido_pat";
-            this.cl_apellido_pat.HeaderText = "cl_apellido_pat";
+            this.cl_apellido_pat.HeaderText = "Apellido paterno";
             this.cl_apellido_pat.Name = "cl_apellido_pat";
             this.cl_apellido_pat.ReadOnly = true;
             // 
             // cl_telefono
             // 
             this.cl_telefono.DataPropertyName = "cl_telefono";
-            this.cl_telefono.HeaderText = "cl_telefono";
+            this.cl_telefono.HeaderText = "Telefono";
             this.cl_telefono.Name = "cl_telefono";
             this.cl_telefono.ReadOnly = true;
             // 
-            // peidclienteDataGridViewTextBoxColumn
+            // peidpedidoDataGridViewTextBoxColumn
             // 
-            this.peidclienteDataGridViewTextBoxColumn.DataPropertyName = "pe_id_cliente";
-            this.peidclienteDataGridViewTextBoxColumn.HeaderText = "pe_id_cliente";
-            this.peidclienteDataGridViewTextBoxColumn.Name = "peidclienteDataGridViewTextBoxColumn";
-            this.peidclienteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // peidempleadoDataGridViewTextBoxColumn
-            // 
-            this.peidempleadoDataGridViewTextBoxColumn.DataPropertyName = "pe_id_empleado";
-            this.peidempleadoDataGridViewTextBoxColumn.HeaderText = "pe_id_empleado";
-            this.peidempleadoDataGridViewTextBoxColumn.Name = "peidempleadoDataGridViewTextBoxColumn";
-            this.peidempleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.peidpedidoDataGridViewTextBoxColumn.DataPropertyName = "pe_id_pedido";
+            this.peidpedidoDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.peidpedidoDataGridViewTextBoxColumn.Name = "peidpedidoDataGridViewTextBoxColumn";
+            this.peidpedidoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // peestatuspedidoDataGridViewCheckBoxColumn
             // 
             this.peestatuspedidoDataGridViewCheckBoxColumn.DataPropertyName = "pe_estatus_pedido";
-            this.peestatuspedidoDataGridViewCheckBoxColumn.HeaderText = "pe_estatus_pedido";
+            this.peestatuspedidoDataGridViewCheckBoxColumn.HeaderText = "Status";
             this.peestatuspedidoDataGridViewCheckBoxColumn.Name = "peestatuspedidoDataGridViewCheckBoxColumn";
             this.peestatuspedidoDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // pEDIDOBindingSource
+            // 
+            this.pEDIDOBindingSource.DataMember = "PEDIDO";
+            this.pEDIDOBindingSource.DataSource = this.pedidos;
+            // 
+            // pedidos
+            // 
+            this.pedidos.DataSetName = "Pedidos";
+            this.pedidos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pEDIDOTableAdapter
+            // 
+            this.pEDIDOTableAdapter.ClearBeforeFill = true;
             // 
             // frmbusquedapedidos
             // 
@@ -210,11 +195,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 541);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtapellido);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.label2);
@@ -233,11 +218,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label2;
@@ -249,8 +234,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_apellido_pat;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn peidclienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn peidempleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn peestatuspedidoDataGridViewCheckBoxColumn;
     }
 }

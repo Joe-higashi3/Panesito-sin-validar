@@ -126,29 +126,33 @@ namespace WindowsFormsApp2.forms
 
         private void dtwclientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtid.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_id_cliente.ToString();
-            txtnombre.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_nombre.ToString();
-            txtapellidop.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_apellido_pat.ToString();
-            txtapellidom.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_apellido_mat.ToString();
-            txttelefono.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_telefono.ToString();
-            txtcalle.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_calle.ToString();
-            txtnumint.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_num_interior.ToString();
-            txtnumext.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_num_exterior.ToString();
-            txtcolonia.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_colonia.ToString();
-            cmbxMunicipio.SelectedValue = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_id_municipio;
-            string sSTATUS;
-            sSTATUS = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_status.ToString();
-            switch (sSTATUS)
+            string tid = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_id_cliente.ToString();
+            if (tid != "1")
             {
-                case "A":
-                    cmbxstatus.Text = "Activo";
-                    break;
-                case "C":
-                    cmbxstatus.Text = "Cancelado";
-                    break;
-                default:
-                    cmbxstatus.Text = "Activo";
-                    break;
+                txtid.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_id_cliente.ToString();
+                txtnombre.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_nombre.ToString();
+                txtapellidop.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_apellido_pat.ToString();
+                txtapellidom.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_apellido_mat.ToString();
+                txttelefono.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_telefono.ToString();
+                txtcalle.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_calle.ToString();
+                txtnumint.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_num_interior.ToString();
+                txtnumext.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_num_exterior.ToString();
+                txtcolonia.Text = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_colonia.ToString();
+                cmbxMunicipio.SelectedValue = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_id_municipio;
+                string sSTATUS;
+                sSTATUS = this.panesitoDataSet2.CLIENTE[cLIENTEBindingSource2.Position].cl_status.ToString();
+                switch (sSTATUS)
+                {
+                    case "A":
+                        cmbxstatus.Text = "Activo";
+                        break;
+                    case "C":
+                        cmbxstatus.Text = "Cancelado";
+                        break;
+                    default:
+                        cmbxstatus.Text = "Activo";
+                        break;
+                }
             }
         }
 

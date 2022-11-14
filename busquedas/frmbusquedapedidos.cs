@@ -20,8 +20,23 @@ namespace WindowsFormsApp2.busquedas
         private void frmbusquedapedidos_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'pedidos.PEDIDO' Puede moverla o quitarla según sea necesario.
-            this.pEDIDOTableAdapter.Fill(this.pedidos.PEDIDO, txt);
+            this.pEDIDOTableAdapter.Fill(this.pedidos.PEDIDO, txtnombre.Text);
 
+        }
+
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
+            this.pEDIDOTableAdapter.Fill(this.pedidos.PEDIDO, txtnombre.Text);
+        }
+
+        private void txtapellido_TextChanged(object sender, EventArgs e)
+        {
+            this.pEDIDOTableAdapter.FillBy(this.pedidos.PEDIDO, txtapellido.Text);
+        }
+
+        private void txttelefono_TextChanged(object sender, EventArgs e)
+        {
+            this.pEDIDOTableAdapter.FillBy1(this.pedidos.PEDIDO, txttelefono.Text);
         }
     }
 }
